@@ -1,5 +1,56 @@
 /* Base */
 
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Navigation Bar */
+
+#nav-login, #nav-signup
+{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#nav-login
+{
+    margin-right: 10px;
+}
+
+/* Header */
+
+#header
+{
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
+#footer
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#contact
+{
+    color: #278b5d;
+}
+
 /* index.jsp */
 
 /* contact.jsp */
@@ -7,6 +58,20 @@
 /* error.jsp */
 
 /* guest.jsp */
+
+#welcome-message
+{
+    margin-top: 45px;
+    background: radial-gradient(at center, #64bb6a, #3cb3c0, #024064, #37782c);
+    background-size: 200% 200%;
+    animation: gradient 12s ease infinite;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#card
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
 
 /* login.jsp */
 
