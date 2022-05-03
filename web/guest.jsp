@@ -23,7 +23,6 @@
                     </ul>
                     <a class="d-flex" href="login.jsp"><button class="btn btn-outline-success" >Login</button></a> 
                     <a class="d-flex" href="signup.jsp"><button class="btn btn-outline-success" >Signup</button></a> 
-
                 </div>
             </div>
         </nav>
