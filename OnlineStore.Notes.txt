@@ -100,9 +100,6 @@ CREATE TABLE cs2609.ordertbl(
 
 
 
-Model
-
-class
 
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
@@ -118,7 +115,7 @@ VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(3, 'Head First Servlets and JSP', 
 'On other words, if you use anything in Head First Servlets & JSP to, say, run a nuclear power plant or air traffic control system, you’re on your own. Readers of this book should be advised that',  
-'Bryan Basham , Kathy Sierra , Bert Bates',' O'Reilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
+'Bryan Basham , Kathy Sierra , Bert Bates','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
@@ -142,8 +139,8 @@ VALUES 	(7, 'An Introduction to Object-Oriented Programming with Java',
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(8, 'Discrete Mathematics and Its Applications', 
-'Rosen's Discrete Mathematics and its Applications presents a precise, relevant, comprehensive approach to mathematical concepts. This world-renowned best-selling text was written to accommodate the needs across a variety of majors and departments, including mathematics, computer science, and engineering. ',  
-'Kenneth H. Rosen','McGraw-Hill', 'year1', 8th Edition, 2019, 978.00, '9781307428674');
+'Rosens Discrete Mathematics and its Applications presents a precise, relevant, comprehensive approach to mathematical concepts. This world-renowned best-selling text was written to accommodate the needs across a variety of majors and departments, including mathematics, computer science, and engineering. ',  
+'Kenneth H. Rosen','McGraw-Hill', '8th Edition, 2019', 2, 978.00, '9781307428674');
 
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
