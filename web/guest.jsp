@@ -13,8 +13,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
     </head>
     
-    <!-- Guest Page -->
-    
     <body> 
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -45,6 +43,8 @@
                 </div>
             </div>
         </nav>
+        
+        <!-- Guest Page -->
         
         <!-- Welcome Message -->
         <header id="welcome-message" class="bg-info py-5">
