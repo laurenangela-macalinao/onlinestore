@@ -2,3 +2,6 @@
 nbproject/private/private.xml
 nbproject/private/private.properties
 dist/OnlineStore.war
+/nbproject/private/
+/build/
+/dist/

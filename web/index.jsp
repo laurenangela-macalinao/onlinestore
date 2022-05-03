@@ -6,7 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>LOGO</h1>
+        <h1>LOGOfgjhhjfghgf</h1>
         <h1>Short Desc</h1>
         <a href="Login.do">test</a> 
         <br>
