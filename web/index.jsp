@@ -3,10 +3,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Welcome Page</title>
     </head>
     <body>
-        <h1>LOGOfgjhhjfghgf</h1>
+        <h1>LOGO</h1>
         <h1>Short Desc</h1>
         <a href="Login.do">test</a> 
         <br>
