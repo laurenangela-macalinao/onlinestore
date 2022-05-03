@@ -116,7 +116,7 @@ VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(3, 'Head First Servlets and JSP', 
 'On other words, if you use anything in Head First Servlets & JSP to, say, run a nuclear power plant or air traffic control system, you’re on your own. Readers of this book should be advised that',  
-'Bryan Basham, Kathy Sierra and Bert Bates','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
+'Kathy Sierra','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
@@ -131,7 +131,7 @@ VALUES 	(5, 'Faces of Music: 25 Years of Lunching with Legends',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(6, '21st Century Tokyo: A Guide to Contemporary Architecture', 
 'Tokyo has earned a reputation as one of the most innovative and forward-thinking cities in the world, and nowhere is this more evident than in its modern architecture.',  
-'Julian Worrall and Erez Golani Solomon','Oxford University Press', '2010', 5, 1448.00, '9784770030542');
+'Julian Worrall','Oxford University Press', '2010', 5, 1448.00, '9784770030542');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(7, 'An Introduction to Object-Oriented Programming with Java', 
