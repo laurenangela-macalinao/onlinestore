@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>controller.ProductServlet</servlet-class>
+        
+        <init-param>
+                <param-name>jdbcClassName</param-name>
+                <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>dbUserName</param-name>
+                <param-value>derby</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>dbPassword</param-name>
+                <param-value>derby</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>jdbcDriverURL</param-name>
+                <param-value>jdbc:derby</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>dbHostName</param-name>
+                <param-value>localhost</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>dbPort</param-name>
+                <param-value>1527</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>databaseName</param-name>
+                <param-value>OnlineStoreDB</param-value>
+        </init-param>
+
+        <init-param>
+                <param-name>dbAdditionalString</param-name>
+                <param-value></param-value>
+        </init-param>
+        
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/ProductServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
