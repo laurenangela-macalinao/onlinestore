@@ -45,7 +45,8 @@ Schedule
 
 May 6 - approve - hu
 
-May 11 - views (static)
+May 11 - views (static) -> finalize styles/formatting
+	- once the java code is introduced, its hard to edit the non-static jsp
 
 May 16 - final tables / schema
 
@@ -110,12 +111,12 @@ VALUES (1, 'Automata Theory',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences', 
 'Market-leading APPLIED CALCULUS FOR THE MANAGERIAL, LIFE, AND SOCIAL SCIENCES: A BRIEF APPROACH, Ninth Edition, applies math to your world in fun and interesting ways. It delivers just the right balance of teaching, technology, and enlightening real-life examples. And when it comes to study time, the Ninth Edition offers an exciting array of supplements that maximize your efforts and improve your results.',  
-'Soo Tan','Cengage Learning', 'Edition: 9, Copyright: 2013', 3, 648.00, '9781285911304');
+'Soo Tan','Cengage Learning', '9th Edition, 2013', 3, 648.00, '9781285911304');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(3, 'Head First Servlets and JSP', 
 'On other words, if you use anything in Head First Servlets & JSP to, say, run a nuclear power plant or air traffic control system, you’re on your own. Readers of this book should be advised that',  
-'Bryan Basham , Kathy Sierra , Bert Bates','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
+'Bryan Basham, Kathy Sierra and Bert Bates','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
