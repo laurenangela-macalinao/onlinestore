@@ -53,13 +53,13 @@
                         <img id="img-contact"></img>
                         <h1 id="h1-name">Benedict Balancio</h1>
                         <h2 id="h2-contact">Email</h2> 
-                        <h2 id="h2-detail">Email</h2>
+                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-envelope"></i></button>Email</h2>
                         <h2 id="h2-contact">Facebook</h2> 
-                        <h2 id="h2-detail">Facebook</h2>
+                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-facebook"></i></button>Facebook</h2>
                         <h2 id="h2-contact">Twitter</h2> 
-                        <h2 id="h2-detail">Twitter</h2>
+                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-twitter"></i></button>Twitter</h2>
                         <h2 id="h2-contact">Instagram</h2> 
-                        <h2 id="h2-detail">Instagram</h2>
+                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-instagram"></i></button>Instagram</h2>
                     </th>
                     <th id="th-profile">
                         <img id="img-contact"></img>
