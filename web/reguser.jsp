@@ -30,31 +30,24 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="login.jsp">
+                    <form class="d-flex" action="cart.jsp" method="GET">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">5</span>
+                         </button>
+                    </form>
+                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
                         <button class="btn btn-outline-success">
-                            Login
+                            Logout
                         </button>
-                    </a> 
-                    <a class="d-flex" id="nav-signup" href="signup.jsp">
-                        <button class="btn btn-outline-success">
-                            Signup
-                        </button>
-                    </a> 
+                    </a>                     
                 </div>
             </div>
         </nav>
         
-        <!-- Guest Page -->
-        
-        <!-- Welcome Message -->
-        <header id="welcome-message" class="bg-info py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Welcome to Book World!</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Enter description here.</p>
-                </div>
-            </div>
-        </header>
+        <!-- Registered Page -->
+
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
