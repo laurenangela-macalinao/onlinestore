@@ -34,10 +34,6 @@
             <param-name>databaseName</param-name>
             <param-value>OnlineStoreDB</param-value>
         </init-param>
-        <init-param>
-            <param-name>dbAdditionalString</param-name>
-            <param-value/>
-        </init-param>
     </servlet>
     <servlet>
         <servlet-name>CartServlet</servlet-name>
