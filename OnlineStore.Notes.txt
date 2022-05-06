@@ -43,21 +43,15 @@ CREATE SCHEMA cs2609
 
 Schedule
 
-May 6 - approve - hu
-
+May 6 - approve - 
 May 11 - views (static) -> finalize styles/formatting
 	- once the java code is introduced, its hard to edit the non-static jsp
-
+May 11 - Payment (qr only)
 May 16 - final tables / schema
-
-May 20 - create sql data / images
+May 20 - create more sql data / images
 May 20 - complete models / controler
-May 20 - Payment
-
 buffer / testing / bug fix
-
 May 23 Mon Video Writeup
-
 May 25 Wed Deadline
 
 CREATE TABLE cs2609.usertbl (
