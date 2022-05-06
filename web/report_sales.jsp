@@ -7,5 +7,13 @@
     </head>
     <body>
         <h1>This generate sales reports</h1>
+        <form action="ReportSalesServlet.do" method="POST">
+            <label for="report">Choose a report:</label>
+            <select id="report" name="reporttype" size="3">
+                <option value="sales" selected="selected">Sales Report</option>
+                <option value="inventory">Inventory Report</option>
+            </select><br>
+            <input type="submit" value="Submit" />
+        </form>        
     </body>
 </html>
