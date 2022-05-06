@@ -17,7 +17,7 @@
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Book</a>
+            <a class="navbar-brand" href="#!">Book World</a>
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
