@@ -31,6 +31,7 @@ public class ReportSalesServlet extends HttpServlet {
         String absoluteDiskPath = getServletContext().getRealPath(relativeWebPath);
         String basePath = absoluteDiskPath.substring(0, absoluteDiskPath.length() - relativeWebPath.length() );
         
+        System.out.println("here");
         String reportType = request.getParameter("reporttype");
         Report reportObj = new Report();
         String reportName = "";
