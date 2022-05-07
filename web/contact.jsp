@@ -6,7 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" href="css/styles.css"/>
-        <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/lexend-deca"/>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
         <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/lexend-deca"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
@@ -29,14 +28,9 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="login.jsp">
-                        <button class="btn btn-outline-success">
-                            Login
-                        </button>
-                    </a> 
                     <a class="d-flex" id="nav-signup" href="signup.jsp">
                         <button class="btn btn-outline-success">
-                            Signup
+                            Logout
                         </button>
                     </a> 
                 </div>
@@ -50,40 +44,61 @@
             <table id="table-contact">
                 <tr id="tr-profile">
                     <th id="th-profile">
-                        <img id="img-contact"></img>
+                        <img id="img-contact" src="assets/benedict.png"></img>
                         <h1 id="h1-name">Benedict Balancio</h1>
-                        <h2 id="h2-contact">Email</h2> 
-                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-envelope"></i></button>Email</h2>
-                        <h2 id="h2-contact">Facebook</h2> 
-                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-facebook"></i></button>Facebook</h2>
-                        <h2 id="h2-contact">Twitter</h2> 
-                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-twitter"></i></button>Twitter</h2>
-                        <h2 id="h2-contact">Instagram</h2> 
-                        <h2 id="h2-detail"><button style='font-size:24px'><i class="bi bi-instagram"></i></button>Instagram</h2>
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/email.png"></img>
+                            Email
+                        </h2> 
+                        <h2 id="h2-detail">Email</h2>
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/facebook.png"></img>
+                            Facebook
+                        </h2>
+                        <h2 id="h2-detail">Facebook</h2> 
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/twitter.png"></img>
+                            Twitter
+                        </h2>
+                        <h2 id="h2-detail">Twitter</h2> 
                     </th>
                     <th id="th-profile">
-                        <img id="img-contact"></img>
+                        <img id="img-contact" src="assets/gianina.png"></img>
                         <h1 id="h1-name">Gianina Gonzalez</h1>
-                        <h2 id="h2-contact">Email</h2> 
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/email.png"></img>
+                            Email
+                        </h2> 
                         <h2 id="h2-detail">Email</h2>
-                        <h2 id="h2-contact">Facebook</h2> 
-                        <h2 id="h2-detail">Facebook</h2>
-                        <h2 id="h2-contact">Twitter</h2> 
-                        <h2 id="h2-detail">Twitter</h2>
-                        <h2 id="h2-contact">Instagram</h2> 
-                        <h2 id="h2-detail">Instagram</h2>
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/facebook.png"></img>
+                            Facebook
+                        </h2>
+                        <h2 id="h2-detail">Facebook</h2> 
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/twitter.png"></img>
+                            Twitter
+                        </h2>
+                        <h2 id="h2-detail">Twitter</h2> 
                     </th>
                     <th id="th-profile">
-                        <img id="img-contact"></img>
+                        <img id="img-contact" src="assets/angela.png"></img>
                         <h1 id="h1-name">Angela Macalinao</h1>
-                        <h2 id="h2-contact">Email</h2> 
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/email.png"></img>
+                            Email
+                        </h2> 
                         <h2 id="h2-detail">Email</h2>
-                        <h2 id="h2-contact">Facebook</h2> 
-                        <h2 id="h2-detail">Facebook</h2>
-                        <h2 id="h2-contact">Twitter</h2> 
-                        <h2 id="h2-detail">Twitter</h2>
-                        <h2 id="h2-contact">Instagram</h2> 
-                        <h2 id="h2-detail">Instagram</h2>
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/facebook.png"></img>
+                            Facebook
+                        </h2>
+                        <h2 id="h2-detail">Facebook</h2> 
+                        <h2 id="h2-contact">
+                            <img id="img-socials" src="assets/twitter.png"></img>
+                            Twitter
+                        </h2>
+                        <h2 id="h2-detail">Twitter</h2> 
                     </th>
                 </tr>
             </table>
