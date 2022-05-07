@@ -57,15 +57,18 @@ body
 
 #h1-contact
 {
+    font-weight: bold;
     text-align: center;
     font-size: 30px;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
     background: lightgray;
     border-radius: 10px;
+    max-width: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #div-contact
@@ -78,29 +81,24 @@ body
     animation: gradient 12s ease infinite;
 }
 
-#table-contact
-{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#th-profile
-{
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    padding: 20px 20px 20px 20px;
-    border-radius: 10px;
-    text-align: left;
-    margin-right: 30px;
-}
-
-#tr-profile
+#div-profile
 {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     background-color: white;
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50%;
+}
+
+#img-contact
+{
+    width: 20%;
+    border-radius: 20px;
+    padding-bottom: 20px;
 }
 
 #h1-name
@@ -113,14 +111,19 @@ body
     color: white;
 }
 
-#img-socials
-{
-    width: 25px;
-}
-
 #h2-contact
 {
-    font-size: 20px;
+    padding-top: 10px;
+    color: lightgray;
+    font-size: 15px;
+}
+
+#img-socials
+{
+    margin-right: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 25px;
 }
 
 #h2-detail

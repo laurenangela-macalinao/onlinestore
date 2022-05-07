@@ -15,7 +15,7 @@
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Book World</a>
+                <a class="navbar-brand" href="#!">Book World</a>
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -36,72 +36,83 @@
                 </div>
             </div>
         </nav>
-        
+
         <!-- Contact Page -->
-        
+
         <div id="div-contact">
             <h1 id="h1-contact">Contact</h1>
-            <table id="table-contact">
-                <tr id="tr-profile">
-                    <th id="th-profile">
-                        <img id="img-contact" src="assets/benedict.png"></img>
-                        <h1 id="h1-name">Benedict Balancio</h1>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/email.png"></img>
-                            Email
-                        </h2> 
-                        <h2 id="h2-detail">Email</h2>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/facebook.png"></img>
-                            Facebook
-                        </h2>
-                        <h2 id="h2-detail">Facebook</h2> 
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/twitter.png"></img>
-                            Twitter
-                        </h2>
-                        <h2 id="h2-detail">Twitter</h2> 
-                    </th>
-                    <th id="th-profile">
-                        <img id="img-contact" src="assets/gianina.png"></img>
-                        <h1 id="h1-name">Gianina Gonzalez</h1>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/email.png"></img>
-                            Email
-                        </h2> 
-                        <h2 id="h2-detail">Email</h2>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/facebook.png"></img>
-                            Facebook
-                        </h2>
-                        <h2 id="h2-detail">Facebook</h2> 
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/twitter.png"></img>
-                            Twitter
-                        </h2>
-                        <h2 id="h2-detail">Twitter</h2> 
-                    </th>
-                    <th id="th-profile">
-                        <img id="img-contact" src="assets/angela.png"></img>
-                        <h1 id="h1-name">Angela Macalinao</h1>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/email.png"></img>
-                            Email
-                        </h2> 
-                        <h2 id="h2-detail">Email</h2>
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/facebook.png"></img>
-                            Facebook
-                        </h2>
-                        <h2 id="h2-detail">Facebook</h2> 
-                        <h2 id="h2-contact">
-                            <img id="img-socials" src="assets/twitter.png"></img>
-                            Twitter
-                        </h2>
-                        <h2 id="h2-detail">Twitter</h2> 
-                    </th>
-                </tr>
-            </table>
+            <div id="div-profile">
+                <img id="img-contact" src="assets/benedict.png"></img>
+                <h1 id="h1-name">Benedict Balancio</h1>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/email.png"></img>
+                    Email
+                </h2> 
+                <h2 id="h2-detail">Email</h2>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/facebook.png"></img>
+                    Facebook
+                </h2>
+                <h2 id="h2-detail">Facebook</h2> 
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/twitter.png"></img>
+                    Twitter
+                </h2>
+                <h2 id="h2-detail">Twitter</h2> 
+            </div>
+
+            <div id="div-profile">
+                <img id="img-contact" src="assets/gianina.png"></img>
+                <h1 id="h1-name">Gianina Gonzalez</h1>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/email.png"></img>
+                    Email
+                </h2> 
+                <h2 id="h2-detail">Email</h2>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/facebook.png"></img>
+                    Facebook
+                </h2>
+                <h2 id="h2-detail">Facebook</h2> 
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/twitter.png"></img>
+                    Twitter
+                </h2>
+                <h2 id="h2-detail">Twitter</h2> 
+            </div>
+
+            <div id="div-profile">
+                <img id="img-contact" src="assets/angela.png"></img>
+                <h1 id="h1-name">Angela Macalinao</h1>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/email.png"></img>
+                    Email
+                </h2> 
+                <h2 id="h2-detail">Email</h2>
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/facebook.png"></img>
+                    Facebook
+                </h2>
+                <h2 id="h2-detail">Facebook</h2> 
+                <h2 id="h2-contact">
+                    <img id="img-socials" src="assets/twitter.png"></img>
+                    Twitter
+                </h2>
+                <h2 id="h2-detail">Twitter</h2> 
+            </div>         
         </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">
+                    Copyright &copy; Book World 2022<br>
+                    Balancio, Gonzalez, & Macalinao<br>
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+
     </body>
 </html>
