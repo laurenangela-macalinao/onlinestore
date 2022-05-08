@@ -17,6 +17,15 @@
     </head>
     
     <body> 
+        <% 
+            String userId = (String)request.getAttribute("userId");
+            
+            List<Cart> cartList = (List<Cart>) request.getAttribute("cartList"); 
+            int maxPage = 1;
+
+            List<Product> productList = (List<Product>) request.getAttribute("productList");
+            maxPage = productList.get(0).maxPage;
+        %>
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -37,7 +46,6 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <% List<Cart> cartList = (List<Cart>) request.getAttribute("cartList"); %>            
                             <span class="badge bg-dark text-white ms-1 rounded-pill"><%=cartList.size()%></span>
                          </button>
                     </form>
@@ -57,10 +65,6 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <%
-                        int maxPage = 1;
-                        
-                        List<Product> productList = (List<Product>) request.getAttribute("productList");
-                        maxPage = productList.get(0).maxPage;
                         for (Product product : productList) {
                             String img;
                             if(product.idproduct < 10)
@@ -68,33 +72,27 @@
                             else
                                 img = "assets/book" + product.idproduct + "-450x300.jpg";
                     %>            
-                            <div class="col mb-5">
-                                <div id="card" class="card h-100">
-                                    <img class="card-img-top" src="<%=img%>" alt="..." />
-                                    <div class="card-body p-4">
-                                        <div class="text-center"><h5 class="fw-bolder"><%=product.title%></h5><%=product.unitprice%></div>
-                                    </div>
-                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center">
-                                            <a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a>
-                                        </div>
+                        <div class="col mb-5">
+                            <div id="card" class="card h-100">
+                                <img class="card-img-top" src="<%=img%>" alt="..." />
+                                <div class="card-body p-4">
+                                    <div class="text-center"><h5 class="fw-bolder"><%=product.title%></h5><%=product.unitprice%></div>
+                                </div>
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center">
+                                        <a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
-                    <%
-                        }
-                    %>
+                        </div>
+                    <% } %>
                 </div>
             </div>
             
             <ul class="pagination justify-content-center" style="margin:10px 0">
-                <%
-                    for(int i = 1; i <= maxPage; i++) {
-                %>
-                    <li class="page-item"><a class="page-link" href="ProductServlet.do?page=<%=i%>"><%=i%></a></li>
-                <%
-                    }
-                %>
+                <% for(int i = 1; i <= maxPage; i++) { %>
+                    <li class="page-item"><a class="page-link" href="ProductServlet.do?pageId=<%=i%>&userId=<%=userId%>"><%=i%></a></li>
+                <% } %>
               </ul>
         </section>
         

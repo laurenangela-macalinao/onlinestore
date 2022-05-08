@@ -79,14 +79,27 @@ public class ProductServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
-            String page = request.getParameter("page");
-            Product product = new Product(conn);
-            List<Product> productList = product.getProductList(Integer.valueOf(page));
-            request.setAttribute("productList", productList);
-            int userId = 1;
+            //-----------------------------------------------
+            String userId = request.getParameter("userId");
+            System.out.println("userId="+userId);
             request.setAttribute("userId", userId);
+            //-----------------------------------------------
+            String pageId = request.getParameter("pageId");
+            System.out.println("pageId="+pageId);
+            request.setAttribute("pageId", pageId);
+            //----------------------------------------------------
+            Product product = new Product(conn);
+            List<Product> productList = product.getProductList(Integer.valueOf(pageId));
+            request.setAttribute("productList", productList);
+            //-------------------------------------------------
             Cart cart = new Cart(conn);
-            List<Cart> cartList = cart.getCartList(userId);
+            String productId = request.getParameter("addCart");
+            if(productId != null)
+            {
+                System.out.println("Has cart paramter : " + productId);
+                cart.addToCart(Integer.valueOf(userId), Integer.valueOf(productId));
+            }
+            List<Cart> cartList = cart.getCartList(Integer.valueOf(userId));
             request.setAttribute("cartList", cartList);
             
             request.getRequestDispatcher("reguser.jsp").forward(request, response);

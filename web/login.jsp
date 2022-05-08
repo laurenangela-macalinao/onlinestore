@@ -7,6 +7,6 @@
     </head>
     <body>
         <h1>Login Page - </h1>
-        <a href="ProductServlet.do?page=1"><button>Testing only</button></a> 
+        <a href="ProductServlet.do?pageId=1&userId=2"><button>Testing only</button></a> 
     </body>
 </html>
