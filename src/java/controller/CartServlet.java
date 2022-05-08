@@ -86,6 +86,10 @@ public class CartServlet extends HttpServlet {
                 out.println("<h1>[" +i + "].idcart = " + cartList.get(i).idcart + "</h1>");
                 out.println("<h1>[" +i + "].idproduct = " + cartList.get(i).idproduct + "</h1>");
                 out.println("<h1>[" +i + "].iduser = " + cartList.get(i).iduser + "</h1>");
+                
+                out.println("<h1>[" +i + "].title = " + cartList.get(i).title + "</h1>");
+                out.println("<h1>[" +i + "].amount = " + cartList.get(i).amount + "</h1>");
+                
                 out.println("<br>");
             }
             out.println("</body>");

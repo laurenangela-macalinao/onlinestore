@@ -22,7 +22,9 @@ public class Cart {
     public int idcart;
     public int idproduct;
     public int iduser;
-    
+    //-----------------
+    public String title;
+    public float amount;
           
     public Cart(Connection conn){
         this.conn = conn;
@@ -37,9 +39,16 @@ public class Cart {
         ResultSet rs = ps.executeQuery();
         while(rs.next()) {
             Cart c = new Cart(conn);
+            Product p = new Product(conn);
+        
             c.idcart = rs.getInt("idcart");
             c.idproduct = rs.getInt("idproduct");
+            System.out.println("c.idproduct = " + c.idproduct);
             c.iduser = rs.getInt("iduser");
+            //------------------------
+            Product p2 = p.getProduct(c.idproduct);
+            c.title = p2.title;
+            c.amount = p2.unitprice;
             result.add(c);
         }        
         return result;
