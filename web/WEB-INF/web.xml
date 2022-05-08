@@ -3,37 +3,45 @@
     <welcome-file-list>
         <welcome-file>reguser.jsp</welcome-file>
     </welcome-file-list>
+    
+    <context-param>
+        <param-name>jdbcClassName</param-name>
+        <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbUserName</param-name>
+        <param-value>derby</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>derby</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>jdbcDriverURL</param-name>
+        <param-value>jdbc:derby</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbHostName</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>dbPort</param-name>
+        <param-value>1527</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>databaseName</param-name>
+        <param-value>OnlineStoreDB</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>ProductServlet</servlet-name>
         <servlet-class>controller.ProductServlet</servlet-class>
-        <init-param>
-            <param-name>jdbcClassName</param-name>
-            <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
-        </init-param>
-        <init-param>
-            <param-name>dbUserName</param-name>
-            <param-value>derby</param-value>
-        </init-param>
-        <init-param>
-            <param-name>dbPassword</param-name>
-            <param-value>derby</param-value>
-        </init-param>
-        <init-param>
-            <param-name>jdbcDriverURL</param-name>
-            <param-value>jdbc:derby</param-value>
-        </init-param>
-        <init-param>
-            <param-name>dbHostName</param-name>
-            <param-value>localhost</param-value>
-        </init-param>
-        <init-param>
-            <param-name>dbPort</param-name>
-            <param-value>1527</param-value>
-        </init-param>
-        <init-param>
-            <param-name>databaseName</param-name>
-            <param-value>OnlineStoreDB</param-value>
-        </init-param>
     </servlet>
     <servlet>
         <servlet-name>CartServlet</servlet-name>

@@ -1,0 +1,290 @@
+CREATE TABLE cs2609.usertbl (
+  iduser INT NOT NULL,
+  username VARCHAR(60) NOT NULL,
+  password VARCHAR(60) NOT NULL,
+  userrole VARCHAR(60) NOT NULL,
+  email VARCHAR(120) NOT NULL,
+  phonenum VARCHAR(20) NOT NULL,
+  address VARCHAR(512) NOT NULL,
+  PRIMARY KEY (iduser));
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (1, 'admin1', 'password', 'admin1', 'admin1@email.com', '0917-7654321', 'address1'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (2, 'admin2', 'password', 'admin2', 'admin2@email.com', '0917-7654322', 'address2'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (3, 'user3', 'password', 'user3', 'user3@email.com', '0917-7654323', 'address3'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (4, 'user4', 'password', 'user4', 'user4@email.com', '0917-7654324', 'address4'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (5, 'user5', 'password', 'user5', 'user5@email.com', '0917-7654325', 'address5'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (6, 'user6', 'password', 'user6', 'user6@email.com', '0917-7654326', 'address6'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (7, 'user7', 'password', 'user7', 'user7@email.com', '0917-7654327', 'address7'); 	
+
+INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
+VALUES (8, 'user8', 'password', 'user8', 'user8@email.com', '0917-7654328', 'address8'); 	
+
+
+
+CREATE TABLE cs2609.producttbl(
+  idproduct INT NOT NULL,    
+  title VARCHAR(512) NOT NULL,
+  description VARCHAR(1024) NOT NULL,
+  image BLOB(1048576),
+  stockcount INT NOT NULL,
+  unitprice DECIMAL(8,2) NOT NULL,
+  ---- unique na approve final project
+  edition VARCHAR(60) NOT NULL,
+  author VARCHAR(512) NOT NULL,
+  isbn VARCHAR(60),
+  publisher VARCHAR(60) NOT NULL,
+  PRIMARY KEY (idproduct));
+
+CREATE TABLE cs2609.carttbl(
+  idcart INT NOT NULL,
+  idproduct INT NOT NULL,
+  iduser INT NOT NULL,
+  
+  PRIMARY KEY (idcart));
+
+todo :
+CREATE TABLE cs2609.ordertbl(
+  idorder INT NOT NULL,
+  ispaid BOOLEAN NOT NULL,
+  PRIMARY KEY (idorder));
+
+
+
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES (1, 'Automata Theory', 	
+'Automata theory is a core course for the B.S. Computer Science degree. Its prerequisites are discret..', 
+'Cecil Jose A. Delfinado','C & E Publishing, Inc.', '2014', 2, 498.00, '9789719801733');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences', 
+'Market-leading APPLIED CALCULUS FOR THE MANAGERIAL, LIFE, AND SOCIAL SCIENCES: A BRIEF APPROACH, Ninth Edition, applies math to your world in fun and interesting ways. It delivers just the right balance of teaching, technology, and enlightening real-life examples. And when it comes to study time, the Ninth Edition offers an exciting array of supplements that maximize your efforts and improve your results.',  
+'Soo Tan','Cengage Learning', '9th Edition, 2013', 3, 648.00, '9781285911304');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(3, 'Head First Servlets and JSP', 
+'On other words, if you use anything in Head First Servlets & JSP to, say, run a nuclear power plant or air traffic control system, you’re on your own. Readers of this book should be advised that',  
+'Kathy Sierra','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
+'With the new edition of this proven bestseller, Photoshop users can master the power of Photoshop CS5 with internationally renowned photographer and Photoshop hall-of-famer Martin Evening by their side. In this acclaimed reference work, Martin covers everything from the core aspects of working in Photoshop to advanced techniques for professional results. subjects covered include organizing a digital workflow, improving creativity, output, automating Photoshop, and using Camera RAW. The style of the book is extremely clear, with real examples, diagrams, illustrations, and step-by-step explanations supporting the text throughout. This is, quite simply, the essential reference for photographers of all levels using Photoshop.',  
+'Martin Evening','Elsevier', '2010', 1, 3099.00, '9780240522005');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(5, 'Faces of Music: 25 Years of Lunching with Legends', 
+'This insightful and inspiring anthology features over 400 photographs and 160 interviews with popular music artists, songwriters, producers, and recording engineers',  
+'Mr. Bonzai','Cengage Learning', '2006', 1, 1870.00, '9781598630244');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(6, '21st Century Tokyo: A Guide to Contemporary Architecture', 
+'Tokyo has earned a reputation as one of the most innovative and forward-thinking cities in the world, and nowhere is this more evident than in its modern architecture.',  
+'Julian Worrall','Oxford University Press', '2010', 5, 1448.00, '9784770030542');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(7, 'An Introduction to Object-Oriented Programming with Java', 
+'An Introduction to Object-Oriented Programming with Java provides an accessible and thorough introduction to the basics of programming in java. This much-anticipated revision continues its emphasis on object-oriented programming.',  
+'C.Thomas Wu','McGraw-Hill', '3rd Edition, 2004', 2, 1470.00, '9780071114677');
+
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
+VALUES 	(8, 'Discrete Mathematics and Its Applications', 
+'Rosens Discrete Mathematics and its Applications presents a precise, relevant, comprehensive approach to mathematical concepts. This world-renowned best-selling text was written to accommodate the needs across a variety of majors and departments, including mathematics, computer science, and engineering. ',  
+'Kenneth H. Rosen','McGraw-Hill', '8th Edition, 2019', 2, 978.00, '9781307428674');
+
+--- dummy placeholder data - needs to be filled up with actual data and images
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(9, 'title9', 'desc9', 'author9', 'publisher9', 'year9', 1, 100.00, 'isbn9');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(10, 'title10', 'desc10', 'author10', 'publisher10', 'year10', 1, 100.00, 'isbn10');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(11, 'title11', 'desc11', 'author11', 'publisher11', 'year11', 1, 100.00, 'isbn11');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(12, 'title12', 'desc12', 'author12', 'publisher12', 'year12', 1, 100.00, 'isbn12');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(13, 'title13', 'desc13', 'author13', 'publisher13', 'year13', 1, 100.00, 'isbn13');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(14, 'title14', 'desc14', 'author14', 'publisher14', 'year14', 1, 100.00, 'isbn14');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(15, 'title15', 'desc15', 'author15', 'publisher15', 'year15', 1, 100.00, 'isbn15');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(16, 'title16', 'desc16', 'author16', 'publisher16', 'year16', 1, 100.00, 'isbn16');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(17, 'title17', 'desc17', 'author17', 'publisher17', 'year17', 1, 100.00, 'isbn17');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(18, 'title18', 'desc18', 'author18', 'publisher18', 'year18', 1, 100.00, 'isbn18');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(19, 'title19', 'desc19', 'author19', 'publisher19', 'year19', 1, 100.00, 'isbn19');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(20, 'title20', 'desc20', 'author20', 'publisher20', 'year20', 1, 100.00, 'isbn20');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(21, 'title21', 'desc21', 'author21', 'publisher21', 'year21', 1, 100.00, 'isbn21');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(22, 'title22', 'desc22', 'author22', 'publisher22', 'year22', 1, 100.00, 'isbn22');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(23, 'title23', 'desc23', 'author23', 'publisher23', 'year23', 1, 100.00, 'isbn23');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(24, 'title24', 'desc24', 'author24', 'publisher24', 'year24', 1, 100.00, 'isbn24');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(25, 'title25', 'desc25', 'author25', 'publisher25', 'year25', 1, 100.00, 'isbn25');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(26, 'title26', 'desc26', 'author26', 'publisher26', 'year26', 1, 100.00, 'isbn26');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(27, 'title27', 'desc27', 'author27', 'publisher27', 'year27', 1, 100.00, 'isbn27');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(28, 'title28', 'desc28', 'author28', 'publisher28', 'year28', 1, 100.00, 'isbn28');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(29, 'title29', 'desc29', 'author29', 'publisher29', 'year29', 1, 100.00, 'isbn29');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(30, 'title30', 'desc30', 'author30', 'publisher30', 'year30', 1, 100.00, 'isbn30');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(31, 'title31', 'desc31', 'author31', 'publisher31', 'year31', 1, 100.00, 'isbn31');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(32, 'title32', 'desc32', 'author32', 'publisher32', 'year32', 1, 100.00, 'isbn32');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(33, 'title33', 'desc33', 'author33', 'publisher33', 'year33', 1, 100.00, 'isbn33');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(34, 'title34', 'desc34', 'author34', 'publisher34', 'year34', 1, 100.00, 'isbn34');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(35, 'title35', 'desc35', 'author35', 'publisher35', 'year35', 1, 100.00, 'isbn35');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(36, 'title36', 'desc36', 'author36', 'publisher36', 'year36', 1, 100.00, 'isbn36');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(37, 'title37', 'desc37', 'author37', 'publisher37', 'year37', 1, 100.00, 'isbn37');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(38, 'title38', 'desc38', 'author38', 'publisher38', 'year38', 1, 100.00, 'isbn38');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(39, 'title39', 'desc39', 'author39', 'publisher39', 'year39', 1, 100.00, 'isbn39');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(40, 'title40', 'desc40', 'author40', 'publisher40', 'year40', 1, 100.00, 'isbn40');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(41, 'title41', 'desc41', 'author41', 'publisher41', 'year41', 1, 100.00, 'isbn41');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(42, 'title42', 'desc42', 'author42', 'publisher42', 'year42', 1, 100.00, 'isbn42');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(43, 'title43', 'desc43', 'author43', 'publisher43', 'year43', 1, 100.00, 'isbn43');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(44, 'title44', 'desc44', 'author44', 'publisher44', 'year44', 1, 100.00, 'isbn44');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(45, 'title45', 'desc45', 'author45', 'publisher45', 'year45', 1, 100.00, 'isbn45');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(46, 'title46', 'desc46', 'author46', 'publisher46', 'year46', 1, 100.00, 'isbn46');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(47, 'title47', 'desc47', 'author47', 'publisher47', 'year47', 1, 100.00, 'isbn47');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(48, 'title48', 'desc48', 'author48', 'publisher48', 'year48', 1, 100.00, 'isbn48');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(49, 'title49', 'desc49', 'author49', 'publisher49', 'year49', 1, 100.00, 'isbn49');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(50, 'title50', 'desc50', 'author50', 'publisher50', 'year50', 1, 100.00, 'isbn50');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(51, 'title51', 'desc51', 'author51', 'publisher51', 'year51', 1, 100.00, 'isbn51');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(52, 'title52', 'desc52', 'author52', 'publisher52', 'year52', 1, 100.00, 'isbn52');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(53, 'title53', 'desc53', 'author53', 'publisher53', 'year53', 1, 100.00, 'isbn53');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(54, 'title54', 'desc54', 'author54', 'publisher54', 'year54', 1, 100.00, 'isbn54');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(55, 'title55', 'desc55', 'author55', 'publisher55', 'year55', 1, 100.00, 'isbn55');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(56, 'title56', 'desc56', 'author56', 'publisher56', 'year56', 1, 100.00, 'isbn56');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(57, 'title57', 'desc57', 'author57', 'publisher57', 'year57', 1, 100.00, 'isbn57');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(58, 'title58', 'desc58', 'author58', 'publisher58', 'year58', 1, 100.00, 'isbn58');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(59, 'title59', 'desc59', 'author59', 'publisher59', 'year59', 1, 100.00, 'isbn59');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(60, 'title60', 'desc60', 'author60', 'publisher60', 'year60', 1, 100.00, 'isbn60');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(61, 'title61', 'desc61', 'author61', 'publisher61', 'year61', 1, 100.00, 'isbn61');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(62, 'title62', 'desc62', 'author62', 'publisher62', 'year62', 1, 100.00, 'isbn62');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(63, 'title63', 'desc63', 'author63', 'publisher63', 'year63', 1, 100.00, 'isbn63');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(64, 'title64', 'desc64', 'author64', 'publisher64', 'year64', 1, 100.00, 'isbn64');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(65, 'title65', 'desc65', 'author65', 'publisher65', 'year65', 1, 100.00, 'isbn65');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(66, 'title66', 'desc66', 'author66', 'publisher66', 'year66', 1, 100.00, 'isbn66');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(67, 'title67', 'desc67', 'author67', 'publisher67', 'year67', 1, 100.00, 'isbn67');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(68, 'title68', 'desc68', 'author68', 'publisher68', 'year68', 1, 100.00, 'isbn68');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(69, 'title69', 'desc69', 'author69', 'publisher69', 'year69', 1, 100.00, 'isbn69');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(70, 'title70', 'desc70', 'author70', 'publisher70', 'year70', 1, 100.00, 'isbn70');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(71, 'title71', 'desc71', 'author71', 'publisher71', 'year71', 1, 100.00, 'isbn71');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(72, 'title72', 'desc72', 'author72', 'publisher72', 'year72', 1, 100.00, 'isbn72');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(73, 'title73', 'desc73', 'author73', 'publisher73', 'year73', 1, 100.00, 'isbn73');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(74, 'title74', 'desc74', 'author74', 'publisher74', 'year74', 1, 100.00, 'isbn74');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(75, 'title75', 'desc75', 'author75', 'publisher75', 'year75', 1, 100.00, 'isbn75');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(76, 'title76', 'desc76', 'author76', 'publisher76', 'year76', 1, 100.00, 'isbn76');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(77, 'title77', 'desc77', 'author77', 'publisher77', 'year77', 1, 100.00, 'isbn77');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(78, 'title78', 'desc78', 'author78', 'publisher78', 'year78', 1, 100.00, 'isbn78');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(79, 'title79', 'desc79', 'author79', 'publisher79', 'year79', 1, 100.00, 'isbn79');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(80, 'title80', 'desc80', 'author80', 'publisher80', 'year80', 1, 100.00, 'isbn80');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(81, 'title81', 'desc81', 'author81', 'publisher81', 'year81', 1, 100.00, 'isbn81');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(82, 'title82', 'desc82', 'author82', 'publisher82', 'year82', 1, 100.00, 'isbn82');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(83, 'title83', 'desc83', 'author83', 'publisher83', 'year83', 1, 100.00, 'isbn83');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(84, 'title84', 'desc84', 'author84', 'publisher84', 'year84', 1, 100.00, 'isbn84');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(85, 'title85', 'desc85', 'author85', 'publisher85', 'year85', 1, 100.00, 'isbn85');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(86, 'title86', 'desc86', 'author86', 'publisher86', 'year86', 1, 100.00, 'isbn86');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(87, 'title87', 'desc87', 'author87', 'publisher87', 'year87', 1, 100.00, 'isbn87');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(88, 'title88', 'desc88', 'author88', 'publisher88', 'year88', 1, 100.00, 'isbn88');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(89, 'title89', 'desc89', 'author89', 'publisher89', 'year89', 1, 100.00, 'isbn89');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(90, 'title90', 'desc90', 'author90', 'publisher90', 'year90', 1, 100.00, 'isbn90');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(91, 'title91', 'desc91', 'author91', 'publisher91', 'year91', 1, 100.00, 'isbn91');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(92, 'title92', 'desc92', 'author92', 'publisher92', 'year92', 1, 100.00, 'isbn92');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(93, 'title93', 'desc93', 'author93', 'publisher93', 'year93', 1, 100.00, 'isbn93');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(94, 'title94', 'desc94', 'author94', 'publisher94', 'year94', 1, 100.00, 'isbn94');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(95, 'title95', 'desc95', 'author95', 'publisher95', 'year95', 1, 100.00, 'isbn95');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(96, 'title96', 'desc96', 'author96', 'publisher96', 'year96', 1, 100.00, 'isbn96');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(97, 'title97', 'desc97', 'author97', 'publisher97', 'year97', 1, 100.00, 'isbn97');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(98, 'title98', 'desc98', 'author98', 'publisher98', 'year98', 1, 100.00, 'isbn98');
+INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
+    VALUES(99, 'title99', 'desc99', 'author99', 'publisher99', 'year99', 1, 100.00, 'isbn99');
+
