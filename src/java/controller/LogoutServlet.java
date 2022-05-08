@@ -2,6 +2,10 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +13,35 @@ import javax.servlet.http.HttpServletResponse;
 
 public class LogoutServlet extends HttpServlet {
 
+    Connection conn;
+
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+
+        try {
+            Class.forName(getServletContext().getInitParameter("jdbcClassName"));
+            String username = getServletContext().getInitParameter("dbUserName");
+            String password = getServletContext().getInitParameter("dbPassword");
+            StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverURL"))
+                    .append("://")
+                    .append(getServletContext().getInitParameter("dbHostName"))
+                    .append(":")
+                    .append(getServletContext().getInitParameter("dbPort"))
+                    .append("/")
+                    .append(getServletContext().getInitParameter("databaseName"));
+            System.out.println(url.toString() + " - Try");
+            System.out.println("username = " + username);
+            conn = DriverManager.getConnection(url.toString(), username, password);
+            System.out.println(url.toString() + " - Success");
+        } catch (SQLException sqle) {
+            System.out.println("SQLException error occured - "
+                    + sqle.getMessage());
+        } catch (ClassNotFoundException nfe) {
+            System.out.println("ClassNotFoundException error occured - "
+                    + nfe.getMessage());
+        }
+    }
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
