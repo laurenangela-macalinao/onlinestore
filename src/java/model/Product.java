@@ -27,9 +27,11 @@ public class Product{
     public String isbn;
     public String publisher;
 
-            
+    public int maxPage;
+    
     public Product(Connection conn){
         this.conn = conn;
+        maxPage = 1;
     }
 
     //one or more
@@ -54,16 +56,18 @@ public class Product{
         }    
         ps.close();
         int targetPage = Integer.valueOf(strpage);
-        int maxPage = (result.size() / 8) + 1;
-        System.out.println("maxPage = " + maxPage);
+        this.maxPage = (result.size() / 8) + 1;
+        System.out.println("maxPage = " + this.maxPage);
         
         List<Product> activePage = new ArrayList<Product>();
         for(int i = 0; i < result.size(); i++)
         {
             if((((i) / 8)+ 1) == targetPage)
             {
-                System.out.println("Adding " + i);
-               activePage.add(result.get(i));
+               System.out.println("Adding " + i);
+               Product p = result.get(i);
+               p.maxPage = maxPage;
+               activePage.add(p);
             }
         }
         return activePage;

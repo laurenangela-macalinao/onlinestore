@@ -85,17 +85,19 @@ public class ProductServlet extends HttpServlet {
             List<Product> productList = product.getProductList(page);
             request.setAttribute("productList", productList);
             
+            request.getRequestDispatcher("reguser.jsp").forward(request, response);
+            
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProductServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Page = " + page + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet ProductServlet</title>");            
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
+//            out.println("<h1>Page = " + page + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
         } catch (SQLException ex) {
             Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
