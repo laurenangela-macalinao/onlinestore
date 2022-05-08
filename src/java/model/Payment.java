@@ -11,7 +11,7 @@ import java.sql.Connection;
 public class Payment {
     private Connection conn;
     
-    public void Payment(Connection conn){
+    public Payment(Connection conn){
         this.conn = conn;
     }
 

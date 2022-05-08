@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Cart;
 import model.Product;
 
 /**
@@ -73,17 +74,20 @@ public class ProductServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-
-        
+       
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
             String page = request.getParameter("page");
-            
             Product product = new Product(conn);
-            List<Product> productList = product.getProductList(page);
+            List<Product> productList = product.getProductList(Integer.valueOf(page));
             request.setAttribute("productList", productList);
+            int userId = 1;
+            request.setAttribute("userId", userId);
+            Cart cart = new Cart(conn);
+            List<Cart> cartList = cart.getCartList(userId);
+            request.setAttribute("cartList", cartList);
             
             request.getRequestDispatcher("reguser.jsp").forward(request, response);
             

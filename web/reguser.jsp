@@ -1,3 +1,4 @@
+<%@page import="model.Cart"%>
 <%@page import="java.util.List"%>
 <%@page import="model.Product"%>
 <!DOCTYPE html>
@@ -36,7 +37,8 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">5</span>
+                            <% List<Cart> cartList = (List<Cart>) request.getAttribute("cartList"); %>            
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"><%=cartList.size()%></span>
                          </button>
                     </form>
                     <a class="d-flex" id="nav-login" href="LogoutServlet.do">

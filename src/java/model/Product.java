@@ -35,7 +35,7 @@ public class Product{
     }
 
     //one or more
-    public List<Product> getProductList(String strpage) throws SQLException {
+    public List<Product> getProductList(int targetPage) throws SQLException {
         List<Product> result = new ArrayList<Product>();
         String query = "SELECT * FROM cs2609.producttbl";
         PreparedStatement ps = conn.prepareStatement(query);
@@ -55,7 +55,6 @@ public class Product{
             result.add(p);
         }    
         ps.close();
-        int targetPage = Integer.valueOf(strpage);
         this.maxPage = (result.size() / 8) + 1;
         System.out.println("maxPage = " + this.maxPage);
         

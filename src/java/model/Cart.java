@@ -7,6 +7,9 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -21,10 +24,15 @@ public class Cart {
     public int totalItem; 
     public float totalAmount; 
           
-    public void Cart(Connection conn){
+    public Cart(Connection conn){
         this.conn = conn;
     }
     
+    public List<Cart> getCartList(int userid) throws SQLException {
+        List<Cart> result = new ArrayList<Cart>();
+     
+        return result;
+    }
     
     public void addToCart(int userid, int productid){
         
