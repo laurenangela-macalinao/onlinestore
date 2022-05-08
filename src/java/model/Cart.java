@@ -7,6 +7,8 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,27 +23,54 @@ public class Cart {
     public int idproduct;
     public int iduser;
     
-    //public int totalItem; 
-    //public float totalAmount; 
           
     public Cart(Connection conn){
         this.conn = conn;
     }
     
-    public List<Cart> getCartList(int userid) throws SQLException {
+    public List<Cart> getCartList(int userId) throws SQLException {
         List<Cart> result = new ArrayList<Cart>();
      
+        String query = "SELECT * FROM CS2609.carttbl WHERE iduser = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, userId);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            Cart c = new Cart(conn);
+            c.idcart = rs.getInt("idcart");
+            c.idproduct = rs.getInt("idproduct");
+            c.iduser = rs.getInt("iduser");
+            result.add(c);
+        }        
         return result;
     }
     
-    public void addToCart(int userid, int productid){
-        //
+    public void addToCart(int userId, int productId) throws SQLException {
+        int lastId = getMaxId(); 
+        System.out.println("lastId = " + lastId);
+        String cmd = "INSERT INTO CS2609.carttbl (idcart,idproduct,iduser) VALUES (?,?,?)";
+        PreparedStatement ps = conn.prepareStatement(cmd);
+        ps.setInt(1, lastId + 1);
+        ps.setInt(2, userId);
+        ps.setInt(3, productId);
+        ps.executeUpdate();
+        ps.close();
     }
     
-    public void removeFromCart(int userid, int productid){
+    public void removeFromCart(int cartId){
         
     }
 
+    private int getMaxId() throws SQLException {
+        String query = "SELECT MAX(idcart) as lastid FROM CS2609.carttbl";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            return rs.getInt("lastid");
+        }
+        return 0;        
+        
+    }
    
     public boolean isCartEmpty()
     {
