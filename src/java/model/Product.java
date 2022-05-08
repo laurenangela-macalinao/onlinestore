@@ -56,7 +56,17 @@ public class Product{
         int targetPage = Integer.valueOf(strpage);
         int maxPage = (result.size() / 8) + 1;
         System.out.println("maxPage = " + maxPage);
-        return result;
+        
+        List<Product> activePage = new ArrayList<Product>();
+        for(int i = 0; i < result.size(); i++)
+        {
+            if((((i) / 8)+ 1) == targetPage)
+            {
+                System.out.println("Adding " + i);
+               activePage.add(result.get(i));
+            }
+        }
+        return activePage;
     }
     
     //unique - just one
