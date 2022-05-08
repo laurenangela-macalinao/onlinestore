@@ -30,7 +30,7 @@
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Book Worlds</a>
+            <a class="navbar-brand" href="#!">Book World</a>
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -114,7 +114,6 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        
+        <script src="js/scripts.js"></script>       
     </body>
 </html>

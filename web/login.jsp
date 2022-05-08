@@ -8,5 +8,6 @@
     <body>
         <h1>Login Page - </h1>
         <a href="ProductServlet.do?pageId=1&userId=3"><button>Testing only</button></a> 
+        <!-- add page id and set to 1 , add userid -->
     </body>
 </html>

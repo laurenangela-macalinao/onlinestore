@@ -44,6 +44,7 @@ public class ProductServlet extends HttpServlet {
                     .append("/")
                     .append(getServletContext().getInitParameter("databaseName"));
             System.out.println(url.toString() + " - Try");
+            System.out.println("username = " + username);
             conn = DriverManager.getConnection(url.toString(), username, password);
             System.out.println(url.toString() + " - Success");
         } catch (SQLException sqle) {
@@ -100,7 +101,6 @@ public class ProductServlet extends HttpServlet {
             Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -139,5 +139,4 @@ public class ProductServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
