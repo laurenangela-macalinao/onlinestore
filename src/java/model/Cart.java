@@ -43,7 +43,6 @@ public class Cart {
         
             c.idcart = rs.getInt("idcart");
             c.idproduct = rs.getInt("idproduct");
-            System.out.println("c.idproduct = " + c.idproduct);
             c.iduser = rs.getInt("iduser");
             //------------------------
             Product p2 = p.getProduct(c.idproduct);
@@ -56,7 +55,6 @@ public class Cart {
     
     public void addToCart(int userId, int productId) throws SQLException {
         int lastId = getMaxId(); 
-        System.out.println("lastId = " + lastId);
         String cmd = "INSERT INTO CS2609.carttbl (idcart,idproduct,iduser) VALUES (?,?,?)";
         PreparedStatement ps = conn.prepareStatement(cmd);
         ps.setInt(1, lastId + 1);

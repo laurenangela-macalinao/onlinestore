@@ -74,7 +74,6 @@ public class Product{
     
     //unique - just one
     public Product getProduct(int prodId) throws SQLException {
-        System.out.println("getProduct(" + prodId + ")");
         String query = "SELECT * FROM cs2609.producttbl WHERE idproduct = ?";
         PreparedStatement ps = conn.prepareStatement(query);
         ps.setInt(1, prodId);
@@ -93,12 +92,9 @@ public class Product{
             p.isbn  = rs.getString("isbn");
             p.publisher  = rs.getString("publisher");
             ps.close();
-            System.out.println("getProduct(" + prodId + ") - success");
-            System.out.println("p.title = " + p.title);
             return p;
         }    
         ps.close();
-        System.out.println("getProduct(" + prodId + ") - null");
         return null;
     }
 
