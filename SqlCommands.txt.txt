@@ -1,12 +1,12 @@
 CREATE TABLE cs2609.usertbl (
-  iduser INT NOT NULL,
-  username VARCHAR(60) NOT NULL,
-  password VARCHAR(60) NOT NULL,
-  userrole VARCHAR(60) NOT NULL,
-  email VARCHAR(120) NOT NULL,
-  phonenum VARCHAR(20) NOT NULL,
-  address VARCHAR(512) NOT NULL,
-  PRIMARY KEY (iduser));
+	iduser INT NOT NULL,
+	username VARCHAR(60) NOT NULL,
+	password VARCHAR(60) NOT NULL,
+	userrole VARCHAR(60) NOT NULL,
+	email VARCHAR(120) NOT NULL,
+	phonenum VARCHAR(20) NOT NULL,
+	address VARCHAR(512) NOT NULL,
+	PRIMARY KEY (iduser));
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
 VALUES (1, 'admin1', 'password', 'admin1', 'admin1@email.com', '0917-7654321', 'address1'); 	
@@ -35,19 +35,17 @@ VALUES (8, 'user8', 'password', 'user8', 'user8@email.com', '0917-7654328', 'add
 
 
 CREATE TABLE cs2609.producttbl(
-  idproduct INT NOT NULL,    
-  title VARCHAR(512) NOT NULL,
-  description VARCHAR(1024) NOT NULL,
-  image BLOB(1048576),
-  stockcount INT NOT NULL,
-  unitprice DECIMAL(8,2) NOT NULL,
-  ---- unique na approve final project
-  edition VARCHAR(60) NOT NULL,
-  author VARCHAR(512) NOT NULL,
-  isbn VARCHAR(60),
-  publisher VARCHAR(60) NOT NULL,
-  PRIMARY KEY (idproduct));
-
+	idproduct INT NOT NULL,    
+	title VARCHAR(512) NOT NULL,
+	description VARCHAR(1024) NOT NULL,
+	image BLOB(1048576),
+	stockcount INT NOT NULL,
+	unitprice DECIMAL(8,2) NOT NULL,
+	edition VARCHAR(60) NOT NULL,
+	author VARCHAR(512) NOT NULL,
+	isbn VARCHAR(60),
+	publisher VARCHAR(60) NOT NULL,
+	PRIMARY KEY (idproduct));
 
 
 
@@ -57,37 +55,37 @@ VALUES (1, 'Automata Theory',
 'Cecil Jose A. Delfinado','C & E Publishing, Inc.', '2014', 5, 498.00, '9789719801733');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences', 
+VALUES (2, 'Applied Calculus for Business, Life and Social Sciences', 
 'Market-leading APPLIED CALCULUS FOR THE MANAGERIAL, LIFE, AND SOCIAL SCIENCES: A BRIEF APPROACH, Ninth Edition, applies math to your world in fun and interesting ways. It delivers just the right balance of teaching, technology, and enlightening real-life examples. And when it comes to study time, the Ninth Edition offers an exciting array of supplements that maximize your efforts and improve your results.',  
 'Soo Tan','Cengage Learning', '9th Edition, 2013', 10, 648.00, '9781285911304');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(3, 'Head First Servlets and JSP', 
+VALUES (3, 'Head First Servlets and JSP', 
 'On other words, if you use anything in Head First Servlets & JSP to, say, run a nuclear power plant or air traffic control system, you’re on your own. Readers of this book should be advised that',  
 'Kathy Sierra','OReilly Media, Inc.', 'March 2008', 2, 1099.00, '9780596516680');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
+VALUES (4, 'Adobe Photoshop CS5 for Photographers', 
 'With the new edition of this proven bestseller, Photoshop users can master the power of Photoshop CS5 with internationally renowned photographer and Photoshop hall-of-famer Martin Evening by their side. In this acclaimed reference work, Martin covers everything from the core aspects of working in Photoshop to advanced techniques for professional results. subjects covered include organizing a digital workflow, improving creativity, output, automating Photoshop, and using Camera RAW. The style of the book is extremely clear, with real examples, diagrams, illustrations, and step-by-step explanations supporting the text throughout. This is, quite simply, the essential reference for photographers of all levels using Photoshop.',  
 'Martin Evening','Elsevier', '2010', 5, 3099.00, '9780240522005');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(5, 'Faces of Music: 25 Years of Lunching with Legends', 
+VALUES (5, 'Faces of Music: 25 Years of Lunching with Legends', 
 'This insightful and inspiring anthology features over 400 photographs and 160 interviews with popular music artists, songwriters, producers, and recording engineers',  
 'Mr. Bonzai','Cengage Learning', '2006', 10, 1870.00, '9781598630244');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(6, '21st Century Tokyo: A Guide to Contemporary Architecture', 
+VALUES (6, '21st Century Tokyo: A Guide to Contemporary Architecture', 
 'Tokyo has earned a reputation as one of the most innovative and forward-thinking cities in the world, and nowhere is this more evident than in its modern architecture.',  
 'Julian Worrall','Oxford University Press', '2010', 5, 1448.00, '9784770030542');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(7, 'An Introduction to Object-Oriented Programming with Java', 
+VALUES (7, 'An Introduction to Object-Oriented Programming with Java', 
 'An Introduction to Object-Oriented Programming with Java provides an accessible and thorough introduction to the basics of programming in java. This much-anticipated revision continues its emphasis on object-oriented programming.',  
 'C.Thomas Wu','McGraw-Hill', '3rd Edition, 2004', 2, 1470.00, '9780071114677');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
-VALUES 	(8, 'Discrete Mathematics and Its Applications', 
+VALUES (8, 'Discrete Mathematics and Its Applications', 
 'Rosens Discrete Mathematics and its Applications presents a precise, relevant, comprehensive approach to mathematical concepts. This world-renowned best-selling text was written to accommodate the needs across a variety of majors and departments, including mathematics, computer science, and engineering. ',  
 'Kenneth H. Rosen','McGraw-Hill', '8th Edition, 2019', 0, 978.00, '9781307428674');
 
@@ -277,11 +275,10 @@ INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, 
 
 
 CREATE TABLE cs2609.carttbl(
-  idcart INT NOT NULL,
-  idproduct INT NOT NULL,
-  iduser INT NOT NULL,
-  
-  PRIMARY KEY (idcart));
+	idcart INT NOT NULL,
+	idproduct INT NOT NULL,
+	iduser INT NOT NULL,
+	PRIMARY KEY (idcart));
 
 INSERT INTO cs2609.carttbl(idcart, idproduct, iduser) 
 VALUES (1, 1, 3);
@@ -299,19 +296,38 @@ INSERT INTO cs2609.carttbl(idcart, idproduct, iduser)
 VALUES (6, 8, 4);
 
 
----1,5
----2,10
----3,2
----4,5
----5,10
----6,2
----7,2
----8,2
+CREATE TABLE cs2609.paymenttbl(
+	idpayment INT NOT NULL,
+	iduser INT NOT NULL,
+	transdate DATE NOT NULL,
+	amount DECIMAL(8,2) NOT NULL,
+	mode VARCHAR(60) NOT NULL,
+	gcashref VARCHAR(60),
+	PRIMARY KEY (idpayment));
 
 
---- todo :
---- CREATE TABLE cs2609.ordertbl(
----   idorder INT NOT NULL,
----   ispaid BOOLEAN NOT NULL,
----   PRIMARY KEY (idorder));
+INSERT INTO cs2609.paymenttbl(idpayment, iduser, transdate, amount, mode) 
+VALUES (1, 4, '2022-05-08', 1099.00, 'COD');
 
+INSERT INTO cs2609.paymenttbl(idpayment, iduser, transdate, amount, mode, gcashref) 
+VALUES (2, 3, '2022-05-08', 4245.00, 'GCASH', '491105679'); --498.00+648.00+3099.00
+
+
+CREATE TABLE cs2609.ordertbl(
+	idorder INT NOT NULL,
+	idproduct INT NOT NULL,
+	iduser INT NOT NULL,
+	idpayment INT NOT NULL);
+
+
+INSERT INTO cs2609.ordertbl(idorder, idproduct, iduser, idpayment) 
+VALUES (1, 1, 3,2 );
+
+INSERT INTO cs2609.ordertbl(idorder, idproduct, iduser, idpayment) 
+VALUES (2, 2, 3, 2);
+
+INSERT INTO cs2609.ordertbl(idorder, idproduct, iduser, idpayment) 
+VALUES (3, 4, 3, 2);
+
+INSERT INTO cs2609.ordertbl(idorder, idproduct, iduser, idpayment) 
+VALUES (5, 3, 4, 1);
