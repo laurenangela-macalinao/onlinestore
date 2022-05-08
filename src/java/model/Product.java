@@ -63,7 +63,7 @@ public class Product{
         {
             if((((i) / 8)+ 1) == targetPage)
             {
-               System.out.println("Adding " + i);
+               //System.out.println("Adding " + i);
                Product p = result.get(i);
                p.maxPage = maxPage;
                activePage.add(p);

@@ -93,10 +93,10 @@ public class ProductServlet extends HttpServlet {
             request.setAttribute("productList", productList);
             //-------------------------------------------------
             Cart cart = new Cart(conn);
-            String productId = request.getParameter("addCart");
+            String productId = request.getParameter("productId");
             if(productId != null)
             {
-                System.out.println("Has cart paramter : " + productId);
+                System.out.println("Has cart parameter : " + productId);
                 cart.addToCart(Integer.valueOf(userId), Integer.valueOf(productId));
             }
             List<Cart> cartList = cart.getCartList(Integer.valueOf(userId));

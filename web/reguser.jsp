@@ -19,6 +19,7 @@
     <body> 
         <% 
             String userId = (String)request.getAttribute("userId");
+            String pageId = (String)request.getAttribute("pageId");
             
             List<Cart> cartList = (List<Cart>) request.getAttribute("cartList"); 
             int maxPage = 1;
@@ -80,7 +81,9 @@
                                 </div>
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     <div class="text-center">
-                                        <a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a>
+                                        <a class="btn btn-outline-dark mt-auto" href="ProductServlet.do?pageId=<%=pageId%>&userId=<%=userId%>&productId=<%=product.idproduct%>">
+                                            Add to Cart
+                                        </a>
                                     </div>
                                 </div>
                             </div>

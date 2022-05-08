@@ -48,31 +48,18 @@ CREATE TABLE cs2609.producttbl(
   publisher VARCHAR(60) NOT NULL,
   PRIMARY KEY (idproduct));
 
-CREATE TABLE cs2609.carttbl(
-  idcart INT NOT NULL,
-  idproduct INT NOT NULL,
-  iduser INT NOT NULL,
-  
-  PRIMARY KEY (idcart));
-
-todo :
-CREATE TABLE cs2609.ordertbl(
-  idorder INT NOT NULL,
-  ispaid BOOLEAN NOT NULL,
-  PRIMARY KEY (idorder));
-
 
 
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES (1, 'Automata Theory', 	
 'Automata theory is a core course for the B.S. Computer Science degree. Its prerequisites are discret..', 
-'Cecil Jose A. Delfinado','C & E Publishing, Inc.', '2014', 2, 498.00, '9789719801733');
+'Cecil Jose A. Delfinado','C & E Publishing, Inc.', '2014', 5, 498.00, '9789719801733');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(2, 'Applied Calculus for Business, Life and Social Sciences', 
 'Market-leading APPLIED CALCULUS FOR THE MANAGERIAL, LIFE, AND SOCIAL SCIENCES: A BRIEF APPROACH, Ninth Edition, applies math to your world in fun and interesting ways. It delivers just the right balance of teaching, technology, and enlightening real-life examples. And when it comes to study time, the Ninth Edition offers an exciting array of supplements that maximize your efforts and improve your results.',  
-'Soo Tan','Cengage Learning', '9th Edition, 2013', 3, 648.00, '9781285911304');
+'Soo Tan','Cengage Learning', '9th Edition, 2013', 10, 648.00, '9781285911304');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(3, 'Head First Servlets and JSP', 
@@ -82,12 +69,12 @@ VALUES 	(3, 'Head First Servlets and JSP',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(4, 'Adobe Photoshop CS5 for Photographers', 
 'With the new edition of this proven bestseller, Photoshop users can master the power of Photoshop CS5 with internationally renowned photographer and Photoshop hall-of-famer Martin Evening by their side. In this acclaimed reference work, Martin covers everything from the core aspects of working in Photoshop to advanced techniques for professional results. subjects covered include organizing a digital workflow, improving creativity, output, automating Photoshop, and using Camera RAW. The style of the book is extremely clear, with real examples, diagrams, illustrations, and step-by-step explanations supporting the text throughout. This is, quite simply, the essential reference for photographers of all levels using Photoshop.',  
-'Martin Evening','Elsevier', '2010', 1, 3099.00, '9780240522005');
+'Martin Evening','Elsevier', '2010', 5, 3099.00, '9780240522005');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(5, 'Faces of Music: 25 Years of Lunching with Legends', 
 'This insightful and inspiring anthology features over 400 photographs and 160 interviews with popular music artists, songwriters, producers, and recording engineers',  
-'Mr. Bonzai','Cengage Learning', '2006', 1, 1870.00, '9781598630244');
+'Mr. Bonzai','Cengage Learning', '2006', 10, 1870.00, '9781598630244');
 
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(6, '21st Century Tokyo: A Guide to Contemporary Architecture', 
@@ -287,4 +274,44 @@ INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, 
     VALUES(98, 'title98', 'desc98', 'author98', 'publisher98', 'year98', 1, 100.00, 'isbn98');
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
     VALUES(99, 'title99', 'desc99', 'author99', 'publisher99', 'year99', 1, 100.00, 'isbn99');
+
+
+CREATE TABLE cs2609.carttbl(
+  idcart INT NOT NULL,
+  idproduct INT NOT NULL,
+  iduser INT NOT NULL,
+  
+  PRIMARY KEY (idcart));
+
+INSERT INTO cs2609.cartbl(idcart, idproduct, iduser) 
+VALUES (1, 1, 3);
+
+INSERT INTO cs2609.cartbl(idcart, idproduct, iduser) 
+VALUES (2, 2, 3);
+
+INSERT INTO cs2609.cartbl(idcart, idproduct, iduser) 
+VALUES (3, 4, 3);
+
+INSERT INTO cs2609.cartbl(idcart, idproduct, iduser) 
+VALUES (5, 3, 4);
+
+INSERT INTO cs2609.cartbl(idcart, idproduct, iduser) 
+VALUES (6, 8, 4);
+
+
+---1,5
+---2,10
+---3,2
+---4,5
+---5,10
+---6,2
+---7,2
+---8,2
+
+
+--- todo :
+--- CREATE TABLE cs2609.ordertbl(
+---   idorder INT NOT NULL,
+---   ispaid BOOLEAN NOT NULL,
+---   PRIMARY KEY (idorder));
 

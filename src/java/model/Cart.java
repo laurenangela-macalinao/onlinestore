@@ -21,8 +21,8 @@ public class Cart {
     public int idproduct;
     public int iduser;
     
-    public int totalItem; 
-    public float totalAmount; 
+    //public int totalItem; 
+    //public float totalAmount; 
           
     public Cart(Connection conn){
         this.conn = conn;
@@ -35,7 +35,7 @@ public class Cart {
     }
     
     public void addToCart(int userid, int productid){
-        
+        //
     }
     
     public void removeFromCart(int userid, int productid){
