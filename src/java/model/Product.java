@@ -6,6 +6,9 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,15 +26,36 @@ public class Product{
     public String author;
     public String isbn;
     public String publisher;
+
             
-    public void Product(Connection conn){
+    public Product(Connection conn){
         this.conn = conn;
     }
 
     //one or more
-    public List<Product> GetProducts() {
+    public List<Product> getProductList(String strpage) throws SQLException {
         List<Product> result = new ArrayList<Product>();
-        
+        String query = "SELECT * FROM cs2609.producttbl";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next())
+        {
+            Product p = new Product(conn);
+            p.idproduct = rs.getInt("idproduct");
+            p.title  = rs.getString("title");
+            p.description  = rs.getString("description");
+            p.stockcount  = rs.getInt("stockcount");
+            p.unitprice  = rs.getFloat("unitprice");
+            p.edition  = rs.getString("edition");
+            p.author  = rs.getString("description");
+            p.isbn  = rs.getString("isbn");
+            p.publisher  = rs.getString("publisher");
+            result.add(p);
+        }    
+        ps.close();
+        int targetPage = Integer.valueOf(strpage);
+        int maxPage = (result.size() / 8) + 1;
+        System.out.println("maxPage = " + maxPage);
         return result;
     }
     

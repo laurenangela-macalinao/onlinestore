@@ -6,6 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Login Page - c/o</h1>
+        <h1>Login Page - </h1>
+        <a href="ProductServlet.do?page=1"><button>Testing only</button></a> 
     </body>
 </html>

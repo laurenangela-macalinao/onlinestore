@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletConfig;
@@ -17,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Product;
 
 /**
  *
@@ -24,34 +26,37 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ProductServlet extends HttpServlet {
 
-    private Connection conn;
+    Connection conn;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
-        try {
-            Class.forName(config.getInitParameter("jdbcClassName"));
-            System.out.println("jdbcClassName: " + config.getInitParameter("jdbcClassName"));
-            String username = config.getInitParameter("dbUserName");
-            String password = config.getInitParameter("dbPassword");
-            StringBuffer url = new StringBuffer(config.getInitParameter("jdbcDriverURL"))
+        try 
+        {
+            Class.forName(getServletContext().getInitParameter("jdbcClassName"));
+            String username = getServletContext().getInitParameter("dbUserName");
+            String password = getServletContext().getInitParameter("dbPassword");
+            StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverURL"))
                     .append("://")
-                    .append(config.getInitParameter("dbHostName"))
+                    .append(getServletContext().getInitParameter("dbHostName"))
                     .append(":")
-                    .append(config.getInitParameter("dbPort"))
+                    .append(getServletContext().getInitParameter("dbPort"))
                     .append("/")
-                    .append(config.getInitParameter("databaseName"));
-            System.out.println(url.toString());
+                    .append(getServletContext().getInitParameter("databaseName"));
+            System.out.println(url.toString() + " - Try");
             conn = DriverManager.getConnection(url.toString(), username, password);
-            // SQLException error occured - Cannot open file:GlassFish_Server\glassfish\domains\domain1/config/keystore.jks [Keystore was tampered with, or password was incorrect]
-                
-            System.out.println("conn - success");
-        } catch (ClassNotFoundException nfe) {
-            System.out.println("ClassNotFoundException error occured - "
-                    + nfe.getMessage());
-        } catch (SQLException sqle) {
+            System.out.println(url.toString() + " - Success");
+
+        } 
+        catch (SQLException sqle) 
+        {
             System.out.println("SQLException error occured - "
                     + sqle.getMessage());
+        } 
+        catch (ClassNotFoundException nfe) 
+        {
+            System.out.println("ClassNotFoundException error occured - "
+                    + nfe.getMessage());
         }
     }
 
@@ -67,8 +72,19 @@ public class ProductServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+
+        
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
+            String page = request.getParameter("page");
+            
+            Product product = new Product(conn);
+            List<Product> productList = product.getProductList(page);
+            request.setAttribute("productList", productList);
+            
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -77,8 +93,11 @@ public class ProductServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Page = " + page + "</h1>");
             out.println("</body>");
             out.println("</html>");
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
