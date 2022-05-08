@@ -89,7 +89,7 @@ VALUES 	(7, 'An Introduction to Object-Oriented Programming with Java',
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice,isbn) 
 VALUES 	(8, 'Discrete Mathematics and Its Applications', 
 'Rosens Discrete Mathematics and its Applications presents a precise, relevant, comprehensive approach to mathematical concepts. This world-renowned best-selling text was written to accommodate the needs across a variety of majors and departments, including mathematics, computer science, and engineering. ',  
-'Kenneth H. Rosen','McGraw-Hill', '8th Edition, 2019', 2, 978.00, '9781307428674');
+'Kenneth H. Rosen','McGraw-Hill', '8th Edition, 2019', 0, 978.00, '9781307428674');
 
 --- dummy placeholder data - needs to be filled up with actual data and images
 INSERT INTO cs2609.producttbl(idproduct, title, description, author, publisher, edition, stockcount, unitprice, isbn)
