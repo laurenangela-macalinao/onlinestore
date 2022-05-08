@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 import java.sql.Connection;
@@ -13,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Product{
-    private Connection conn;
-    
     public int idproduct;
     public String title;
     public String description;
@@ -28,6 +21,9 @@ public class Product{
     public String publisher;
 
     public int maxPage;
+
+    private Connection conn;
+    
     
     public Product(Connection conn){
         this.conn = conn;

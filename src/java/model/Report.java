@@ -10,6 +10,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.sql.Connection;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -17,10 +18,13 @@ import java.time.format.DateTimeFormatter;
  *
  */
 public class Report {
-    public Report(){
-        
+    
+    private Connection conn;
+    
+    public Report(Connection conn){
+        this.conn = conn;
     }
-    //7. Report Sales
+    
     public String createSalesReport(String basePath){
 
         Document docs = new Document();

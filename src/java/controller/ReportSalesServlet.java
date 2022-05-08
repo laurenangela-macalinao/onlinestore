@@ -61,7 +61,7 @@ public class ReportSalesServlet extends HttpServlet {
         
         System.out.println("here");
         String reportType = request.getParameter("reporttype");
-        Report reportObj = new Report();
+        Report reportObj = new Report(conn);
         String reportName = "";
         if(reportType.equals("sales")) {
             reportName = reportObj.createSalesReport(basePath);

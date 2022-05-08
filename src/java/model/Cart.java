@@ -17,7 +17,6 @@ import java.util.List;
  *
  */
 public class Cart {
-    private Connection conn;
 
     public int idcart;
     public int idproduct;
@@ -25,7 +24,9 @@ public class Cart {
     //-----------------
     public String title;
     public float amount;
-          
+
+    private Connection conn;
+    
     public Cart(Connection conn){
         this.conn = conn;
     }
