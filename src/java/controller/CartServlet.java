@@ -82,16 +82,29 @@ public class CartServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet CartServlet at " + request.getContextPath() + "</h1>");
+
+            float totalAmount = 0;
+            int totalCount = 0;
             for(int i = 0; i < cartList.size(); i++) {
-                out.println("<h1>[" +i + "].idcart = " + cartList.get(i).idcart + "</h1>");
-                out.println("<h1>[" +i + "].idproduct = " + cartList.get(i).idproduct + "</h1>");
-                out.println("<h1>[" +i + "].iduser = " + cartList.get(i).iduser + "</h1>");
+                //out.println("<h1>[" +i + "].idcart = " + cartList.get(i).idcart + "</h1>");
+                //out.println("<h1>[" +i + "].idproduct = " + cartList.get(i).idproduct + "</h1>");
+                //out.println("<h1>[" +i + "].iduser = " + cartList.get(i).iduser + "</h1>");
                 
                 out.println("<h1>[" +i + "].title = " + cartList.get(i).title + "</h1>");
                 out.println("<h1>[" +i + "].amount = " + cartList.get(i).amount + "</h1>");
                 
+                totalCount += 1;
+                totalAmount += cartList.get(i).amount;
+                
                 out.println("<br>");
             }
+            out.println("<h1>Total Count = " + totalCount + "</h1>");
+            out.println("<h1>Total Amount = " + totalAmount + "</h1>");
+            
+            //out.println("<a href=\"CheckoutServlet.do\"><button>Checkout</button></a>");
+            out.println("<a href=\"payment.jsp\"><button>Payment</button></a>");
+            
+
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {
