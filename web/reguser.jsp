@@ -43,7 +43,9 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <form class="d-flex" action="cart.jsp" method="GET">
+                    <form class="d-flex" action="CartServlet.do" method="GET">
+                        <input type="hidden" name="pageid" value="<%=pageId%>">
+                        <input type="hidden" name="userId" value="<%=userId%>">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart

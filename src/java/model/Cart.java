@@ -51,8 +51,8 @@ public class Cart {
         String cmd = "INSERT INTO CS2609.carttbl (idcart,idproduct,iduser) VALUES (?,?,?)";
         PreparedStatement ps = conn.prepareStatement(cmd);
         ps.setInt(1, lastId + 1);
-        ps.setInt(2, userId);
-        ps.setInt(3, productId);
+        ps.setInt(2, productId);
+        ps.setInt(3, userId);
         ps.executeUpdate();
         ps.close();
     }

@@ -2,13 +2,49 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Cart;
 
 public class CartServlet extends HttpServlet {
 
+    Connection conn;
+
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+
+        try {
+            Class.forName(getServletContext().getInitParameter("jdbcClassName"));
+            String username = getServletContext().getInitParameter("dbUserName");
+            String password = getServletContext().getInitParameter("dbPassword");
+            StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverURL"))
+                    .append("://")
+                    .append(getServletContext().getInitParameter("dbHostName"))
+                    .append(":")
+                    .append(getServletContext().getInitParameter("dbPort"))
+                    .append("/")
+                    .append(getServletContext().getInitParameter("databaseName"));
+            System.out.println(url.toString() + " - Try");
+            conn = DriverManager.getConnection(url.toString(), username, password);
+            System.out.println(url.toString() + " - Success");
+        } catch (SQLException sqle) {
+            System.out.println("SQLException error occured - "
+                    + sqle.getMessage());
+        } catch (ClassNotFoundException nfe) {
+            System.out.println("ClassNotFoundException error occured - "
+                    + nfe.getMessage());
+        }
+    }
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -22,6 +58,22 @@ public class CartServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
+            //-----------------------------------------------
+            String userId = request.getParameter("userId");
+            System.out.println("userId="+userId);
+            request.setAttribute("userId", userId);
+            //-----------------------------------------------
+            String pageId = request.getParameter("pageId");
+            System.out.println("pageId="+pageId);
+            request.setAttribute("pageId", pageId);
+            //-----------------------------------------------
+            Cart cart = new Cart(conn);
+            
+            List<Cart> cartList = cart.getCartList(Integer.valueOf(userId));
+            request.setAttribute("cartList", cartList);
+            //-----------------------------------------------
+            
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -30,8 +82,16 @@ public class CartServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet CartServlet at " + request.getContextPath() + "</h1>");
+            for(int i = 0; i < cartList.size(); i++) {
+                out.println("<h1>[" +i + "].idcart = " + cartList.get(i).idcart + "</h1>");
+                out.println("<h1>[" +i + "].idproduct = " + cartList.get(i).idproduct + "</h1>");
+                out.println("<h1>[" +i + "].iduser = " + cartList.get(i).iduser + "</h1>");
+                out.println("<br>");
+            }
             out.println("</body>");
             out.println("</html>");
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

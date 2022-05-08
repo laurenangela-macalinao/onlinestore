@@ -32,8 +32,7 @@ public class ProductServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
-        try 
-        {
+        try {
             Class.forName(getServletContext().getInitParameter("jdbcClassName"));
             String username = getServletContext().getInitParameter("dbUserName");
             String password = getServletContext().getInitParameter("dbPassword");
@@ -47,15 +46,10 @@ public class ProductServlet extends HttpServlet {
             System.out.println(url.toString() + " - Try");
             conn = DriverManager.getConnection(url.toString(), username, password);
             System.out.println(url.toString() + " - Success");
-
-        } 
-        catch (SQLException sqle) 
-        {
+        } catch (SQLException sqle) {
             System.out.println("SQLException error occured - "
                     + sqle.getMessage());
-        } 
-        catch (ClassNotFoundException nfe) 
-        {
+        } catch (ClassNotFoundException nfe) {
             System.out.println("ClassNotFoundException error occured - "
                     + nfe.getMessage());
         }
@@ -73,8 +67,6 @@ public class ProductServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-       
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -104,17 +96,6 @@ public class ProductServlet extends HttpServlet {
             
             request.getRequestDispatcher("reguser.jsp").forward(request, response);
             
-            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet ProductServlet</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet ProductServlet at " + request.getContextPath() + "</h1>");
-//            out.println("<h1>Page = " + page + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
         } catch (SQLException ex) {
             Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
