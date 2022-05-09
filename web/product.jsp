@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Book World - Registered</title>
+        <title>Book World - Product List</title>
         <meta charset="utf-8"/>
         <meta name="author" content=""/>
         <meta name="description" content=""/>
@@ -42,8 +42,6 @@
             </div>
         </nav>
         
-        <!-- Registered Page -->
-
         <!-- Section-->
         <section class="py-5">
             <div class="container mt-3">
