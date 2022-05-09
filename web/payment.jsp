@@ -41,51 +41,17 @@
                 </div>
             </div>
         </nav>
-        
 
         <!-- Section-->
         <section class="py-5">
             <div class="container mt-3">
-           
                 <div class="py-5 text-center">
                     <h2>Payment form</h2>
-                </div>
+                </div>                
                 <div class="row g-5">
-                    <div class="col-md-5 col-lg-4 order-md-last">
-                        <h4 class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-primary">Your Order</span>
-                            <span class="badge bg-primary rounded-pill">3</span>
-                        </h4>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Title1</h6>
-                                    <small class="text-muted">Author1</small>
-                                </div>
-                                <span class="text-muted">P500</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Title2</h6>
-                                    <small class="text-muted">Author2</small>
-                                </div>
-                                <span class="text-muted">P1000</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">Title3</h6>
-                                    <small class="text-muted">Author3</small>
-                                </div>
-                                <span class="text-muted">P500</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span>Total (Pesos)</span>
-                                <strong>P2000</strong>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="col-md-7 col-lg-8">
                         <h4 class="mb-3">Billing address</h4>
+                        
                         <form class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-12">
@@ -111,7 +77,7 @@
                                         Please enter a valid phone number for shipping updates.
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-12">
                                     <label for="address" class="form-label">Complete Address</label>
                                     <input type="text" class="form-control" id="address" placeholder="Plaza street" required>
@@ -120,11 +86,10 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <hr class="my-4">
 
                             <h4 class="mb-3">Payment</h4>
-
                             <div class="my-3">
                                 <div class="form-check">
                                     <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
@@ -134,20 +99,57 @@
                                     <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
                                     <label class="form-check-label" for="debit">GCash</label>
                                 </div>
-
+                            </div>
                             <div class="row gy-3">
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" id="cc-name" placeholder="CGash Ref #">
                                 </div>
-
-                            <hr class="my-4">
-
-                            <button class="w-100 btn btn-danger btn-lg" type="submit">Proceed Payment</button>
+                            </div>
                         </form>
                     </div>
+                    
+                    
+                    
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-primary">Your Order</span>
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">21st Century Tokyo: A Guide to Contemporary Architecture</h6>
+                                    <small class="text-muted">Julian Worrall</small>
+                                </div>
+                                <span class="text-muted">P1,448.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Applied Calculus for Business, Life and Social Sciences</h6>
+                                    <small class="text-muted">Soo Tan</small>
+                                </div>
+                                <span class="text-muted">P648.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 class="my-0">Faces of Music: 25 Years of Lunching with Legends</h6>
+                                    <small class="text-muted">Mr. Bonzai</small>
+                                </div>
+                                <span class="text-muted">P1,870.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (Pesos)</span>
+                                <strong>P3,966.00</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div>
+                    <hr class="my-4">
+                    <button class="w-100 btn btn-danger btn-lg" type="submit">Proceed Payment</button>
                 </div>
             </div>
-            
         </section>
         
         <!-- Footer -->
