@@ -45,21 +45,100 @@
 
         <!-- Section-->
         <section class="py-5">
-            <div class="container mt-3">
-              <h2>Add Product</h2>
             
-                <form>
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Enter ISBN" name="isbn">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Enter Title" name="title">
-                    </div>
-                  </div>
-                </form>            
-              
-            </div>
+            <div class="container"  mt-10> 
+              <div class="card"> 
+                <div class="row g-0"> 
+                    <div class="col-md-6"> 
+                        <div class="h-100 d-flex justify-content-center align-items-center"> 
+                            <div class="py-4 px-3"> 
+                                <br>
+                                <h4>Add Product</h4> 
+                                
+                                <div class="row g-2 mt-1"> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-field"> 
+                                            <input class="form-control" id="title" placeholder="Enter Title" required> 
+                                            <label for="input1">Title</label> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> <div class="input-field"> 
+                                            <input class="form-control" id="isbn" placeholder="Enter ISBN" required> 
+                                            <label for="input2">ISBN</label> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                <div class="row g-2 mt-1"> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-field"> 
+                                            <input class="form-control" id="author" placeholder="Enter Author" required> 
+                                            <label for="input1">Author</label> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> <div class="input-field"> 
+                                            <input class="form-control" id="publisher" placeholder="Enter Publisher" required> 
+                                            <label for="input2">Publisher</label> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                
+                                <div class="row g-2 mt-1"> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-field"> 
+                                            <input class="form-control" id="edition" placeholder="Enter Year/Edition" required> 
+                                            <label for="input1">Year/Edition</label> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> <div class="input-field"> 
+                                            <input class="form-control" id="price" placeholder="Enter Price" required> 
+                                            <label for="input2">Price</label> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                
+                                <div class="row mt-2"> 
+                                    <div class="col-md-12"> <div class="input-field"> 
+                                            <input class="form-control" id="description" placeholder="Enter Description" required> 
+                                            <label for="input3">Description</label> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                                
+                                <div class="row g-2 mt-1"> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-field"> 
+                                            <input class="form-control" id="stockcount" placeholder="Enter Stock Count" required> 
+                                            <label for="input1">Stock Count</label> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> <div class="input-field"> 
+                                            <input class="form-control" id="imageid" placeholder="Enter Image Location" required> 
+                                            <label for="input2">Image Location</label> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="col-md-6"> 
+                        <div class="right-side-content"> 
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="right-side"> 
+                                <span><img src="assets/book99-450x300.jpg" class="img-thumbnail"> </span> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    
+                    <div class="container "> 
+                        <button class="w-100 btn btn-danger btn-lg justify-content-center" type="submit">Save</button>
+                    </div> 
+                </div> 
+                  
+              </div> 
+            
         </section>
         
         <!-- Footer -->
