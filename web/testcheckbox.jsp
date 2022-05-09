@@ -77,10 +77,12 @@
                 }
                 out.println("P" + String.join(",P",s));
                 out.println("<h2>Total Amount P" + total + "</h2>");
+        %> 
+            <br>
+            <a href="CheckoutServlet.do"><button>Pay now</button></a> 
+        <%
             }
         %> 
-        <br>
-        <a href="CheckoutServlet.do"><button>Pay now</button></a> 
         
     </body>
 </html>
