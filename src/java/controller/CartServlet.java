@@ -58,7 +58,8 @@ public class CartServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-
+            //this servet will allow the user to finalize the items from cart for payment
+            
             //-----------------------------------------------
             String userId = request.getParameter("userId");
             System.out.println("userId="+userId);
