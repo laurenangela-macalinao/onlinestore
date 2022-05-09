@@ -252,9 +252,22 @@ table, tr, td
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: crimson;
-    width: 100%;
+    background-color: black;
+    width: 95%;
     padding: 10px 0px 10px 0px;
+}
+
+#div-cartp
+{
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+#h2-cartp
+{
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* admin.jsp */
