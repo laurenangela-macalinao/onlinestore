@@ -157,7 +157,7 @@
 
                 String s[] = request.getParameterValues("id");
                 if (s != null && s.length != 0) {
-                    out.println("<h2 id="id">You have selected " + s.length + " items.</h2>");
+                    out.println("<h2 id=\"id\">You have selected " + s.length + " items.</h2>");
                     float total = 0.0f;
                     for (int i = 0; i < s.length; i++) {
                         int id = Integer.valueOf(s[i]);
