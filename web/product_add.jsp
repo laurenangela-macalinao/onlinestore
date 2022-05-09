@@ -17,6 +17,7 @@
     </head>
     
     <body> 
+        
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -45,16 +46,16 @@
 
         <!-- Section-->
         <section class="py-5">
-            
-            <div class="container"  mt-10> 
+            <div class="container mt-3">
+                <div class="py-5 text-center">
+                    <h2>Add Product</h2>
+                </div>
+                
               <div class="card"> 
                 <div class="row g-0"> 
                     <div class="col-md-6"> 
                         <div class="h-100 d-flex justify-content-center align-items-center"> 
                             <div class="py-4 px-3"> 
-                                <br>
-                                <h4>Add Product</h4> 
-                                
                                 <div class="row g-2 mt-1"> 
                                     <div class="col-md-6"> 
                                         <div class="input-field"> 
@@ -122,12 +123,8 @@
                     </div> 
                     <div class="col-md-6"> 
                         <div class="right-side-content"> 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="right-side"> 
-                                <span><img src="assets/book99-450x300.jpg" class="img-thumbnail"> </span> 
+                            <div class="right-side mt-5"> 
+                                <img src="assets/book99-450x300.jpg" class="img-thumbnail"> 
                             </div> 
                         </div> 
                     </div> 
