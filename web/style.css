@@ -101,12 +101,6 @@ body
     padding-bottom: 20px;
 }
 
-.row
-{
-    padding-top: 10px;
-    padding-bottom: 7px;
-}
-
 /*
 #h1-name
 {
@@ -170,11 +164,6 @@ body
 
 /* cart.jsp */
 
-#body-cart
-{
-    background: white;
-}
-
 #div-cart
 {
     font-family: 'Lexend Deca', sans-serif;
@@ -206,19 +195,66 @@ body
     font-size: 18px;
 }
 
-#form-cart
+#row-cart
 {
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
     border-radius: 10px;
-    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 7px;
 }
 
 table, tr, td
 {
     padding: 20px;
     border-collapse: collapse;
+}
+
+#h2-book
+{
+    font-size: 18px;
+}
+
+#h2-price
+{
+    font-size: 18px;
+}
+
+#h2-itemno
+{
+    font-size: 18px;
+}
+
+#img-bcart
+{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#input-select, #input-delete
+{
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: crimson;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+#button-paynow
+{
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: crimson;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
 }
 
 /* admin.jsp */
