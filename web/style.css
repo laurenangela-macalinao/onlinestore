@@ -36,7 +36,7 @@ body
     padding-bottom: 10px;
     background-color: white;
     font-family: 'Lexend Deca', sans-serif;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -101,6 +101,13 @@ body
     padding-bottom: 20px;
 }
 
+.row
+{
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+/*
 #h1-name
 {
     font-size: 25px;
@@ -135,6 +142,7 @@ body
     background: lightgray;
     border-radius: 10px;
 }
+*/
 
 /* error.jsp */
 
@@ -161,6 +169,57 @@ body
 /* reguser.jsp */
 
 /* cart.jsp */
+
+#body-cart
+{
+    background: white;
+}
+
+#div-cart
+{
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+}
+
+#h1-cart
+{
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+#h2-cart
+{
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#form-cart
+{
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+table, tr, td
+{
+    padding: 20px;
+    border-collapse: collapse;
+}
 
 /* admin.jsp */
 
