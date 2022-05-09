@@ -21,24 +21,39 @@
         <form ACTION="">
             <table>
                 <tr>
+                    <td><input type="checkbox" name="id" value="0"></td>
+                    <td><img src="assets\book99-450x300.jpg" alt=""  width="90" height="60"></td>
                     <td>Book 1</td>
-                    <td><input type="checkbox" name="id" value="0">P 120.00</td>
+                    <td>P120.00</td>
+                    <td>1 Item</td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="id" value="1"></td>
+                    <td><img src="assets\book99-450x300.jpg" alt=""  width="90" height="60"></td>
                     <td>Book 2</td>
-                    <td><input type="checkbox" name="id" value="1">P 150.00</td>
+                    <td>P150.00</td>
+                    <td>1 Item</td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="id" value="2"></td>
+                    <td><img src="assets\book99-450x300.jpg" alt=""  width="90" height="60"></td>
                     <td>Book 3</td>
-                    <td><input type="checkbox" name="id" value="2">P 210.00</td>
+                    <td>P210.00</td>
+                    <td>1 Item</td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="id" value="3"></td>
+                    <td><img src="assets\book99-450x300.jpg" alt=""  width="90" height="60"></td>
                     <td>Book 4</td>
-                    <td><input type="checkbox" name="id" value="3">P 130.00</td>
+                    <td>P130.00</td>
+                    <td>1 Item</td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="id" value="4"></td>
+                    <td><img src="assets\book99-450x300.jpg" alt=""  width="90" height="60"></td>
                     <td>Book 5</td>
-                    <td><input type="checkbox" name="id" value="4">P 180.00</td>
+                    <td>P180.00</td>
+                    <td>1 Item</td>
                 </tr>
             </table>            
             <td><input type="submit" value="Select Items"></td>
