@@ -194,9 +194,7 @@
                                     <h2 id="h2-book">Book 1</h2>
                                 </div>
                                 <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
+                                    <h2 id="h2-itemno">Out of Stock</h2>
                                 </div>                                
                             </div>
                         </div>
@@ -213,9 +211,7 @@
                                     <h2 id="h2-book">Book 2</h2>
                                 </div>
                                 <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
+                                    <h2 id="h2-itemno">Out of Stock</h2>
                                 </div>                                 
                             </div>
                         </div>
@@ -232,9 +228,7 @@
                                     <h2 id="h2-book">Book 3</h2>
                                 </div>
                                 <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
+                                    <h2 id="h2-itemno">Out of Stock</h2>
                                 </div>                                 
                             </div>
                         </div>
@@ -251,9 +245,7 @@
                                     <h2 id="h2-book">Book 4</h2>
                                 </div>
                                 <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
+                                    <h2 id="h2-itemno">Out of Stock</h2>
                                 </div>                               
                             </div>
                         </div>
@@ -270,9 +262,7 @@
                                     <h2 id="h2-book">Book 5</h2>
                                 </div>
                                 <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
+                                    <h2 id="h2-itemno">Out of Stock</h2>
                                 </div>                                  
                             </div>
                         </div>
