@@ -17,17 +17,8 @@
  </style><!-- comment -->        
     </head>
     <body>
-        <h2>Select Items:</h2>
+        <h2>Select Items from Cart :</h2>
         <form ACTION="">
-            <!-- 
-            <input type="checkbox" name="id" value="120">Book 1 : P 120.00<BR>
-            <input type="checkbox" name="id" value="150">Book 2 : P 150.00<BR>
-            <input type="checkbox" name="id" value="210">Book 3 : P 210.00<BR>
-            <input type="checkbox" name="id" value="130">Book 4 : P 130.00<BR>
-            <input type="checkbox" name="id" value="180">Book 5 : P 180.00<BR>
-            <input type="submit" value="Select Items">            
-            -->            
-            
             <table>
                 <tr>
                     <td>Book 1</td>
