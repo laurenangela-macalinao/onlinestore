@@ -32,245 +32,249 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="login.jsp">
+                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
                         <button class="btn btn-outline-success">
-                            Login
+                            Logout
                         </button>
-                    </a> 
-                    <a class="d-flex" id="nav-signup" href="signup.jsp">
-                        <button class="btn btn-outline-success">
-                            Signup
-                        </button>
-                    </a> 
+                    </a>                     
                 </div>
             </div>
         </nav>
 
         <!-- Cart Page -->
-        <div id="div-cart">
-            <h1 id="h1-cart">Shopping Cart</h1>
-            <form action="">
-                <h2 id="h2-cart">Select Items from Cart</h2>
-                <div class="container">
-                    <!-- Item 1 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 1</h2>
+        <section class="py-5">
+            <div class="container mt-3">
+                <div class="py-5 text-center">
+                    <h1>Shopping Cart</h1>
+                </div>                
+                <div class="py-5 text-center">
+                    <form action="">
+                        <h2 id="h2-cart">Select Items from Cart</h2>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div id="row-cart" class="row">
+                                <div class="col-sm-3">
+                                    <input type="checkbox" name="id" value="0">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
                                 </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
-                                </div>                                
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            <h2 id="h2-book">Book 1</h2>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <h2 id="h2-price">P120</h2>
+                                            <br>
+                                            <h2 id="h2-itemno">1 item</h2>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div id="row-cart" class="row">
+                                <div class="col-sm-3">
+                                    <input type="checkbox" name="id" value="0">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            <h2 id="h2-book">Book 2</h2>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <h2 id="h2-price">P120</h2>
+                                            <br>
+                                            <h2 id="h2-itemno">1 item</h2>
+                                        </div>                                 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div id="row-cart" class="row">
+                                <div class="col-sm-3">
+                                    <input type="checkbox" name="id" value="0">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            <h2 id="h2-book">Book 3</h2>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <h2 id="h2-price">P120</h2>
+                                            <br>
+                                            <h2 id="h2-itemno">1 item</h2>
+                                        </div>                                 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div id="row-cart" class="row">
+                                <div class="col-sm-3">
+                                    <input type="checkbox" name="id" value="0">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            <h2 id="h2-book">Book 4</h2>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <h2 id="h2-price">P120</h2>
+                                            <br>
+                                            <h2 id="h2-itemno">1 item</h2>
+                                        </div>                               
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div id="row-cart" class="row">
+                                <div class="col-sm-3">
+                                    <input type="checkbox" name="id" value="0">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-8 col-sm-6">
+                                            <h2 id="h2-book">Book 5</h2>
+                                        </div>
+                                        <div class="col-4 col-sm-6">
+                                            <h2 id="h2-price">P120</h2>
+                                            <br>
+                                            <h2 id="h2-itemno">1 item</h2>
+                                        </div>                                  
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 2</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
-                                </div>                                 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 3</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
-                                </div>                                 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 4</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
-                                </div>                               
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 5</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-price">P120</h2>
-                                    <br>
-                                    <h2 id="h2-itemno">1 item</h2>
-                                </div>                                  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input id="input-select" type="submit" value="Select Items"></input>
-            </form>      
-            
-            <div id="div-cartp">
-            <%
-                //table of values from cart depending on books, this will be generated by servlet
-                float[] array = {120.0f, 150.0f, 210.0f, 130.0f, 180.0f};
+                        <input class="w-100 btn btn-warning btn-lg" type="submit" value="Select Items"></input>
+                    </form>      
+                </div>                
+                <div class="text-center">
+                    <div id="div-cartp">
+                    <%
+                        //table of values from cart depending on books, this will be generated by servlet
+                        float[] array = {120.0f, 150.0f, 210.0f, 130.0f, 180.0f};
 
-                String s[] = request.getParameterValues("id");
-                if (s != null && s.length != 0) {
-                    out.println("<h2 id=\"h2-cartp\">You have selected " + s.length + " items.</h2>");
-                    float total = 0.0f;
-                    for (int i = 0; i < s.length; i++) {
-                        int id = Integer.valueOf(s[i]);
-                        total += array[id];
-                        if (i > 0) {
-                            out.println(",");
+                        String s[] = request.getParameterValues("id");
+                        if (s != null && s.length != 0) {
+                            out.println("<h2 id=\"h2-cartp\">You have selected " + s.length + " items.</h2>");
+                            float total = 0.0f;
+                            for (int i = 0; i < s.length; i++) {
+                                int id = Integer.valueOf(s[i]);
+                                total += array[id];
+                                if (i > 0) {
+                                    out.println(",");
+                                }
+                                out.println("P" + array[i]);
+                            }
+                            out.println("<h2 id=\"h2-cartp\">Total Amount P" + total + "</h2>");
+                    %> 
+                    <br>
+                    <button class="w-100 btn btn-danger btn-lg" type="submit">Pay Now</button>
+                    <%
                         }
-                        out.println("P" + array[i]);
-                    }
-                    out.println("<h2 id=\"h2-cartp\">Total Amount P" + total + "</h2>");
-            %> 
-            <br>
-            <a href="CheckoutServlet.do"><button id="button-paynow">Pay now</button></a> 
-            <%
-                }
-            %>
+                    %>
+                    </div> 
+                    <hr class="my-4">
+                   
+                    <div>
+                        <!-- Out of Stock Items -->
+                        <form action="">
+                            <h2 id="h2-cart">Out of Stock Items</h2>
+                            <div class="container">
+                                <!-- Item 1 -->
+                                <div id="row-cart" class="row">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="id" value="0">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                <h2 id="h2-book">Book 1</h2>
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                <h2 id="h2-itemno">Out of Stock</h2>
+                                            </div>                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div id="row-cart" class="row">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="id" value="0">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                <h2 id="h2-book">Book 2</h2>
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                <h2 id="h2-itemno">Out of Stock</h2>
+                                            </div>                                 
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div id="row-cart" class="row">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="id" value="0">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                <h2 id="h2-book">Book 3</h2>
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                <h2 id="h2-itemno">Out of Stock</h2>
+                                            </div>                                 
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 4 -->
+                                <div id="row-cart" class="row">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="id" value="0">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                <h2 id="h2-book">Book 4</h2>
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                <h2 id="h2-itemno">Out of Stock</h2>
+                                            </div>                               
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 5 -->
+                                <div id="row-cart" class="row">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" name="id" value="0">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                <h2 id="h2-book">Book 5</h2>
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                <h2 id="h2-itemno">Out of Stock</h2>
+                                            </div>                                  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="input-delete" type="submit" value="Delete Items"></input>
+                        </form>                                   
+                    </div>
+                </div>                
             </div>
-            
-            <!-- Out of Stock Items -->
-            
-            <form action="">
-                <h2 id="h2-cart">Out of Stock Items</h2>
-                <div class="container">
-                    <!-- Item 1 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 1</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-itemno">Out of Stock</h2>
-                                </div>                                
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 2</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-itemno">Out of Stock</h2>
-                                </div>                                 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 3</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-itemno">Out of Stock</h2>
-                                </div>                                 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 4</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-itemno">Out of Stock</h2>
-                                </div>                               
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5 -->
-                    <div id="row-cart" class="row">
-                        <div class="col-sm-3">
-                            <input type="checkbox" name="id" value="0">
-                            <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="row">
-                                <div class="col-8 col-sm-6">
-                                    <h2 id="h2-book">Book 5</h2>
-                                </div>
-                                <div class="col-4 col-sm-6">
-                                    <h2 id="h2-itemno">Out of Stock</h2>
-                                </div>                                  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input id="input-delete" type="submit" value="Delete Items"></input>
-            </form>           
-        </div>
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">

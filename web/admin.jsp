@@ -6,6 +6,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Registered User</h1>
+        <h1>Admin</h1>
     </body>
 </html>
