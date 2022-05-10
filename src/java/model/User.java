@@ -9,7 +9,6 @@ public class User {
     
     private Connection conn;
 
-    //test
     public User(Connection conn)
     {
         this.conn = conn;
