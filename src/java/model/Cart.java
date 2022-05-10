@@ -23,8 +23,10 @@ public class Cart {
     public int iduser;
     //-----------------
     public String title;
+    public String author;
     public float amount;
-
+    public int itemcount;
+    
     private Connection conn;
     
     public Cart(Connection conn){
@@ -49,6 +51,7 @@ public class Cart {
             Product p2 = p.getProduct(c.idproduct);
             c.title = p2.title;
             c.amount = p2.unitprice;
+            c.itemcount = 1;
             result.add(c);
         }        
         return result;
@@ -71,7 +74,9 @@ public class Cart {
             //------------------------
             Product p2 = p.getProduct(c.idproduct);
             c.title = p2.title;
+            c.author = p2.author;
             c.amount = p2.unitprice;
+            c.itemcount = 1;
             if(p2.stockcount > 0) {
                 result.add(c);
             }
@@ -96,6 +101,7 @@ public class Cart {
             //------------------------
             Product p2 = p.getProduct(c.idproduct);
             c.title = p2.title;
+            c.author = p2.author;
             c.amount = p2.unitprice;
             if(p2.stockcount == 0) {
                 result.add(c);

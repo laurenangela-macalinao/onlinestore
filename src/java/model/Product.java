@@ -45,7 +45,7 @@ public class Product{
             p.stockcount  = rs.getInt("stockcount");
             p.unitprice  = rs.getFloat("unitprice");
             p.edition  = rs.getString("edition");
-            p.author  = rs.getString("description");
+            p.author  = rs.getString("author");
             p.isbn  = rs.getString("isbn");
             p.publisher  = rs.getString("publisher");
             result.add(p);
@@ -84,7 +84,7 @@ public class Product{
             p.stockcount  = rs.getInt("stockcount");
             p.unitprice  = rs.getFloat("unitprice");
             p.edition  = rs.getString("edition");
-            p.author  = rs.getString("description");
+            p.author  = rs.getString("author");
             p.isbn  = rs.getString("isbn");
             p.publisher  = rs.getString("publisher");
             ps.close();
