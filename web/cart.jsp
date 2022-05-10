@@ -47,7 +47,7 @@
                 <div class="py-5 text-center">
                     <h1>Shopping Cart</h1>
                 </div>                
-                <div class="py-5 text-center">
+                <div class="py-3 text-center">
                     <form action="">
                         <h2 id="h2-cart">Select Items from Cart</h2>
                         <div class="container">
@@ -55,7 +55,7 @@
                             <div id="row-cart" class="row">
                                 <div class="col-sm-3">
                                     <input type="checkbox" name="id" value="0">
-                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row">
@@ -66,6 +66,7 @@
                                             <h2 id="h2-price">P120</h2>
                                             <br>
                                             <h2 id="h2-itemno">1 item</h2>
+                                            <h2><i class="bi bi-trash"></i></h2>
                                         </div>                                
                                     </div>
                                 </div>
@@ -74,7 +75,7 @@
                             <div id="row-cart" class="row">
                                 <div class="col-sm-3">
                                     <input type="checkbox" name="id" value="0">
-                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row">
@@ -85,6 +86,7 @@
                                             <h2 id="h2-price">P120</h2>
                                             <br>
                                             <h2 id="h2-itemno">1 item</h2>
+                                            <h2><i class="bi bi-trash"></i></h2>
                                         </div>                                 
                                     </div>
                                 </div>
@@ -93,7 +95,7 @@
                             <div id="row-cart" class="row">
                                 <div class="col-sm-3">
                                     <input type="checkbox" name="id" value="0">
-                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row">
@@ -104,6 +106,7 @@
                                             <h2 id="h2-price">P120</h2>
                                             <br>
                                             <h2 id="h2-itemno">1 item</h2>
+                                            <h2><i class="bi bi-trash"></i></h2>
                                         </div>                                 
                                     </div>
                                 </div>
@@ -112,7 +115,7 @@
                             <div id="row-cart" class="row">
                                 <div class="col-sm-3">
                                     <input type="checkbox" name="id" value="0">
-                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row">
@@ -123,6 +126,7 @@
                                             <h2 id="h2-price">P120</h2>
                                             <br>
                                             <h2 id="h2-itemno">1 item</h2>
+                                            <h2><i class="bi bi-trash"></i></h2>
                                         </div>                               
                                     </div>
                                 </div>
@@ -131,7 +135,7 @@
                             <div id="row-cart" class="row">
                                 <div class="col-sm-3">
                                     <input type="checkbox" name="id" value="0">
-                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                    <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row">
@@ -142,6 +146,7 @@
                                             <h2 id="h2-price">P120</h2>
                                             <br>
                                             <h2 id="h2-itemno">1 item</h2>
+                                            <h2><i class="bi bi-trash"></i></h2>
                                         </div>                                  
                                     </div>
                                 </div>
@@ -152,29 +157,33 @@
                 </div>                
                 <div class="text-center">
                     <div id="div-cartp">
-                    <%
-                        //table of values from cart depending on books, this will be generated by servlet
-                        float[] array = {120.0f, 150.0f, 210.0f, 130.0f, 180.0f};
+                    <form action="">
+                       
+                        <%
+                            //table of values from cart depending on books, this will be generated by servlet
+                            float[] array = {120.0f, 150.0f, 210.0f, 130.0f, 180.0f};
 
-                        String s[] = request.getParameterValues("id");
-                        if (s != null && s.length != 0) {
-                            out.println("<h2 id=\"h2-cartp\">You have selected " + s.length + " items.</h2>");
-                            float total = 0.0f;
-                            for (int i = 0; i < s.length; i++) {
-                                int id = Integer.valueOf(s[i]);
-                                total += array[id];
-                                if (i > 0) {
-                                    out.println(",");
+                            String s[] = request.getParameterValues("id");
+                            if (s != null && s.length != 0) {
+                                out.println("<h2 id=\"h2-cartp\">You have selected " + s.length + " items.</h2>");
+                                float total = 0.0f;
+                                for (int i = 0; i < s.length; i++) {
+                                    int id = Integer.valueOf(s[i]);
+                                    total += array[id];
+                                    if (i > 0) {
+                                        out.println(",");
+                                    }
+                                    out.println("P" + array[i]);
                                 }
-                                out.println("P" + array[i]);
+                                out.println("<h2 id=\"h2-cartp\">Total Amount P" + total + "</h2>");
+                        %> 
+                        <br>
+                        <input class="w-100 btn btn-danger btn-lg" type="submit" value="Pay Now"></input>
+                        <%
                             }
-                            out.println("<h2 id=\"h2-cartp\">Total Amount P" + total + "</h2>");
-                    %> 
-                    <br>
-                    <button class="w-100 btn btn-danger btn-lg" type="submit">Pay Now</button>
-                    <%
-                        }
-                    %>
+                        %>
+                    </form>      
+                    
                     </div> 
                     <hr class="my-4">
                    
@@ -187,7 +196,7 @@
                                 <div id="row-cart" class="row">
                                     <div class="col-sm-3">
                                         <input type="checkbox" name="id" value="0">
-                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="row">
@@ -204,7 +213,7 @@
                                 <div id="row-cart" class="row">
                                     <div class="col-sm-3">
                                         <input type="checkbox" name="id" value="0">
-                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="row">
@@ -221,7 +230,7 @@
                                 <div id="row-cart" class="row">
                                     <div class="col-sm-3">
                                         <input type="checkbox" name="id" value="0">
-                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="row">
@@ -238,7 +247,7 @@
                                 <div id="row-cart" class="row">
                                     <div class="col-sm-3">
                                         <input type="checkbox" name="id" value="0">
-                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="row">
@@ -255,7 +264,7 @@
                                 <div id="row-cart" class="row">
                                     <div class="col-sm-3">
                                         <input type="checkbox" name="id" value="0">
-                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="90" height="60">
+                                        <img id="img-bcart" src="assets\book99-450x300.jpg"  width="180" height="120">
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="row">
