@@ -32,16 +32,11 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="login.jsp">
+                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
                         <button class="btn btn-outline-success">
-                            Login
+                            Logout
                         </button>
-                    </a> 
-                    <a class="d-flex" id="nav-signup" href="signup.jsp">
-                        <button class="btn btn-outline-success">
-                            Signup
-                        </button>
-                    </a> 
+                    </a>                     
                 </div>
             </div>
         </nav>
@@ -53,7 +48,7 @@
                     <h1>Shopping Cart</h1>
                 </div>                
                 <div class="py-3 text-center">
-                    <form action="">
+                    <form action="cart.jsp">
                         <h2 id="h2-cart">Select Items from Cart</h2>
                         <div class="container">
                             <!-- Item 1 -->
