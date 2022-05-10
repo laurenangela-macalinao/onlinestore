@@ -71,11 +71,17 @@ public class CartServlet extends HttpServlet {
             //-----------------------------------------------
             Cart cart = new Cart(conn);
             
-            List<Cart> cartList = cart.getCartList(Integer.valueOf(userId));
-            request.setAttribute("cartList", cartList);
-            //-----------------------------------------------
+            List<Cart> cartInStockList = cart.getInStockCartList(Integer.valueOf(userId));
+            request.setAttribute("cartInStockList", cartInStockList);
             
-            /* TODO output your page here. You may use following sample code. */
+            List<Cart> cartNoStockList = cart.getNoStockCartList(Integer.valueOf(userId));
+            request.setAttribute("cartNoStockList", cartNoStockList);
+            
+            request.getRequestDispatcher("cart.jsp").forward(request, response);
+            
+            //-----------------------------------------------
+
+/*           
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -86,16 +92,16 @@ public class CartServlet extends HttpServlet {
 
             float totalAmount = 0;
             int totalCount = 0;
-            for(int i = 0; i < cartList.size(); i++) {
+            for(int i = 0; i < cartInStockList.size(); i++) {
                 //out.println("<h1>[" +i + "].idcart = " + cartList.get(i).idcart + "</h1>");
                 //out.println("<h1>[" +i + "].idproduct = " + cartList.get(i).idproduct + "</h1>");
                 //out.println("<h1>[" +i + "].iduser = " + cartList.get(i).iduser + "</h1>");
                 
-                out.println("<h1>[" +i + "].title = " + cartList.get(i).title + "</h1>");
-                out.println("<h1>[" +i + "].amount = " + cartList.get(i).amount + "</h1>");
+                out.println("<h1>[" +i + "].title = " + cartInStockList.get(i).title + "</h1>");
+                out.println("<h1>[" +i + "].amount = " + cartInStockList.get(i).amount + "</h1>");
                 
                 totalCount += 1;
-                totalAmount += cartList.get(i).amount;
+                totalAmount += cartInStockList.get(i).amount;
                 
                 out.println("<br>");
             }
@@ -108,6 +114,8 @@ public class CartServlet extends HttpServlet {
 
             out.println("</body>");
             out.println("</html>");
+*/
+
         } catch (SQLException ex) {
             Logger.getLogger(ProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -54,6 +54,57 @@ public class Cart {
         return result;
     }
     
+    public List<Cart> getInStockCartList(int userId) throws SQLException {
+        List<Cart> result = new ArrayList<Cart>();
+     
+        String query = "SELECT * FROM CS2609.carttbl WHERE iduser = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, userId);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            Cart c = new Cart(conn);
+            Product p = new Product(conn);
+        
+            c.idcart = rs.getInt("idcart");
+            c.idproduct = rs.getInt("idproduct");
+            c.iduser = rs.getInt("iduser");
+            //------------------------
+            Product p2 = p.getProduct(c.idproduct);
+            c.title = p2.title;
+            c.amount = p2.unitprice;
+            if(p2.stockcount > 0) {
+                result.add(c);
+            }
+        }        
+        return result;
+    }
+    
+    public List<Cart> getNoStockCartList(int userId) throws SQLException {
+        List<Cart> result = new ArrayList<Cart>();
+     
+        String query = "SELECT * FROM CS2609.carttbl WHERE iduser = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, userId);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            Cart c = new Cart(conn);
+            Product p = new Product(conn);
+        
+            c.idcart = rs.getInt("idcart");
+            c.idproduct = rs.getInt("idproduct");
+            c.iduser = rs.getInt("iduser");
+            //------------------------
+            Product p2 = p.getProduct(c.idproduct);
+            c.title = p2.title;
+            c.amount = p2.unitprice;
+            if(p2.stockcount == 0) {
+                result.add(c);
+            }
+        }        
+        return result;
+    }
+    
+    
     public void addToCart(int userId, int productId) throws SQLException {
         int lastId = getMaxId(); 
         String cmd = "INSERT INTO CS2609.carttbl (idcart,idproduct,iduser) VALUES (?,?,?)";
