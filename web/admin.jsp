@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
+                    <a class="d-flex" id="nav-login" href="reports.jsp">
                         <button class="btn btn-outline-success">
                             Reports
                         </button>
