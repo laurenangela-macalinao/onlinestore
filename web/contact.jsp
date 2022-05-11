@@ -38,7 +38,6 @@
         </nav>
 
         <!-- Contact Page -->
-
         <div id="div-contact">
             <h1 id="h1-contact">Contact</h1>
             <div id="div-profile">
