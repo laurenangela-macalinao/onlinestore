@@ -49,9 +49,16 @@
 
         <!-- Admin Page -->
         
+        <header id="welcome-message" class="bg-info py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Administrator</h1>
+                </div>
+            </div>
+        </header>
         <section class="py-5">
             <div class="container mt-3">
-                <h2>Product List</h2>
+                <h1 id="h1-prodlist">Product List</h2>
                 <table class="table">
                     <thead>
                         <tr>
