@@ -61,6 +61,7 @@
         </nav>
 
         <!-- Cart Page -->
+        
         <section class="py-5">
             <div class="container mt-3">
                 <div class="py-5 text-center">
@@ -147,6 +148,7 @@
                 </div>
                 
                 <!-- Out of Stock Items -->
+                
                 <%
                     if(cartNoStockList != null && cartNoStockList.size() > 0)
                     {

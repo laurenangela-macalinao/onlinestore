@@ -272,6 +272,11 @@ table, tr, td
 
 /* admin.jsp */
 
+.d-flex
+{
+    text-decoration: none;
+}
+
 /* product.jsp */
 
 /* product_add.jsp */
