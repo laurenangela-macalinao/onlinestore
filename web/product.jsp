@@ -35,9 +35,15 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
                     <a class="d-flex" id="nav-login" href="LogoutServlet.do">
                         <button class="btn btn-outline-success">
+                            Reports
+                        </button>
+                    </a>                     
+                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
+                        <button class="btn btn-outline-success">
                             Logout
                         </button>
                     </a>                     
+                    
                 </div>
             </div>
         </nav>
@@ -164,6 +170,9 @@
               
             </div>
            
+            <div>
+                <h3>Add Product</h3>
+            </div>
             
             <ul class="pagination justify-content-center" style="margin:10px 0">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>

@@ -26,6 +26,13 @@
             List<Cart> cartInStockList = (List<Cart>) request.getAttribute("cartInStockList"); 
             List<Cart> cartNoStockList = (List<Cart>) request.getAttribute("cartNoStockList"); 
 
+            System.out.println("cart.jsp - start");
+            if(cartInStockList == null) System.out.println("cart.jsp - cartInStockList == null");
+            if(cartNoStockList == null) System.out.println("cart.jsp - cartNoStockList == null");
+            
+            //request.setAttribute("cartInStockList", cartInStockList);
+            //request.setAttribute("cartNoStockList", cartNoStockList);
+
         %>
         
         <!--Header-->
@@ -60,7 +67,7 @@
                     <h1>Shopping Cart</h1>
                 </div>                
                 <div class="py-3 text-center">
-                    <form action="cart.jsp">
+                    <form action="form.jsp">
                         <h2 id="h2-cart">Select Items from Cart</h2>
                         <div class="container">
                             <%
@@ -101,6 +108,8 @@
                             
                             <%
                                 }
+                                System.out.println("cart.jsp - cart item list - done");
+
                             %>
                                 
                         </div>
