@@ -6,8 +6,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Login Page - </h1>
-        <a href="ProductServlet.do?pageId=1&userId=3"><button>Testing only</button></a> 
+        <h1>Login Page - no code yet - simulate as if login is successful!</h1>
+        <a href="ProductServlet.do?pageId=1&userId=3"><button>Reg User : Testing only</button></a> 
+        <br>
+        <a href="admin.jsp?pageId=1&userId=1"><button>Admin    : Testing only</button></a> 
         <!-- add page id and set to 1 , add userid -->
     </body>
 </html>
