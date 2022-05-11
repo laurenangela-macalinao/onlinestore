@@ -9,7 +9,7 @@
         <meta name="author" content=""/>
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <link rel="stylesheet" href="css-style.css"/>
+        <link rel="stylesheet" href="css/css-style.css"/>
         <link rel="stylesheet" href="css/styles.css"/>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
         <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/lexend-deca"/>
@@ -43,14 +43,18 @@
             </div>
         </nav>
         
-
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <h2>Update Product</h2>
+        <!-- Admin: Update Product Page -->
+        
+        <header id="welcome-message" class="bg-info py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Administrator</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Update Product</p>
                 </div>
-                
+            </div>
+        </header>
+        <section class="py-5">
+            <div class="container">               
               <div class="card"> 
                 <div class="row g-0"> 
                     <div class="col-md-6"> 

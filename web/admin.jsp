@@ -174,7 +174,7 @@
                     </tbody>
                 </table>
                 <div>
-                    <a class="d-flex" href="product_add.jps">
+                    <a class="d-flex" href="product_add.jsp">
                         <button id="btn-addprod" class="btn btn-outline-success">
                             Add Product
                         </button>
