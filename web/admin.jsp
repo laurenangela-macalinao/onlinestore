@@ -167,14 +167,13 @@
                        
                    </tbody>
               </table>
-            <div>
-                <a class="d-flex" href="product_add.jps">
-                    <button class="btn btn-outline-success">
-                        Add Product
-                    </button>
-                </a>                     
-               
-            </div>
+                <div>
+                    <a class="d-flex" href="product_add.jps">
+                        <button class="btn btn-outline-success">
+                            Add Product
+                        </button>
+                    </a>                     
+                </div>
               
             </div>
            

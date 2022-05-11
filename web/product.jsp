@@ -168,11 +168,16 @@
                    </tbody>
               </table>
               
+                <div>
+                    <a class="d-flex" href="product_add.jps">
+                        <button class="btn btn-outline-success">
+                            Add Product
+                        </button>
+                    </a>                     
+                </div>
+              
             </div>
            
-            <div>
-                <h3>Add Product</h3>
-            </div>
             
             <ul class="pagination justify-content-center" style="margin:10px 0">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
