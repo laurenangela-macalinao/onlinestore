@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Book World - Registered2</title>
+        <title>Book World - Registered</title>
         <meta charset="utf-8"/>
         <meta name="author" content=""/>
         <meta name="description" content=""/>
