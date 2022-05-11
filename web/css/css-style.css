@@ -270,9 +270,21 @@ table, tr, td
 
 /* admin.jsp */
 
+.py-5
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
 .d-flex
 {
     text-decoration: none;
+}
+
+#h1-prodlist
+{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 
 /* product.jsp */
