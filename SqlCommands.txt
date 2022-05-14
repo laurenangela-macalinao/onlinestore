@@ -3,34 +3,35 @@ CREATE TABLE cs2609.usertbl (
 	username VARCHAR(60) NOT NULL,
 	password VARCHAR(60) NOT NULL,
 	userrole VARCHAR(60) NOT NULL,
+
 	email VARCHAR(120) NOT NULL,
 	phonenum VARCHAR(20) NOT NULL,
 	address VARCHAR(512) NOT NULL,
 	PRIMARY KEY (iduser));
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (1, 'admin1', 'password', 'admin1', 'admin1@email.com', '0917-7654321', 'address1'); 	
+VALUES (1, 'admin1', 'password', 'admin', 'admin1@email.com', '0917-7654321', 'address1'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (2, 'admin2', 'password', 'admin2', 'admin2@email.com', '0917-7654322', 'address2'); 	
+VALUES (2, 'admin2', 'password', 'admin', 'admin2@email.com', '0917-7654322', 'address2'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (3, 'user3', 'password', 'user3', 'user3@email.com', '0917-7654323', 'address3'); 	
+VALUES (3, 'user3', 'password', 'user', 'user3@email.com', '0917-7654323', 'address3'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (4, 'user4', 'password', 'user4', 'user4@email.com', '0917-7654324', 'address4'); 	
+VALUES (4, 'user4', 'password', 'user', 'user4@email.com', '0917-7654324', 'address4'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (5, 'user5', 'password', 'user5', 'user5@email.com', '0917-7654325', 'address5'); 	
+VALUES (5, 'user5', 'password', 'user', 'user5@email.com', '0917-7654325', 'address5'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (6, 'user6', 'password', 'user6', 'user6@email.com', '0917-7654326', 'address6'); 	
+VALUES (6, 'user6', 'password', 'user', 'user6@email.com', '0917-7654326', 'address6'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (7, 'user7', 'password', 'user7', 'user7@email.com', '0917-7654327', 'address7'); 	
+VALUES (7, 'user7', 'password', 'user', 'user7@email.com', '0917-7654327', 'address7'); 	
 
 INSERT INTO cs2609.usertbl(iduser, username, password, userrole, email, phonenum, address) 
-VALUES (8, 'user8', 'password', 'user8', 'user8@email.com', '0917-7654328', 'address8'); 	
+VALUES (8, 'user8', 'password', 'user', 'user8@email.com', '0917-7654328', 'address8'); 	
 
 
 

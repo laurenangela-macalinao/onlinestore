@@ -5,11 +5,17 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Security;
+import model.User;
+import nl.captcha.Captcha;
 
 public class LoginServlet extends HttpServlet {
 
@@ -53,23 +59,56 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+  
+        HttpSession session = request.getSession(true);
+ 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String answer = request.getParameter("answer");
         
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        Captcha captcha = (Captcha) request.getSession().getAttribute(Captcha.NAME);
+        if(!captcha.isCorrect(answer))
+        {
+            //retain all values
+            request.getSession().setAttribute("username",username);
+            request.getSession().setAttribute("password",password);
+ 
+            String message = "Wrong Captcha.";
+            request.setAttribute("message", message);            
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+            //response.sendRedirect("login.jsp");
+        }
+        User user = new User(conn);
+        try {
+            if (!user.isExits(username)){
+                String message = "Invalid username/password";
+                request.setAttribute("message", message);            
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+            String savedPassword = user.getPassword(username);
+            String plainPassword = Security.decrypt(savedPassword);
+            if (!plainPassword.equals(password))
+            {
+                String message = "Invalid username/password";
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+
+            request.getSession().setAttribute("user", user.getUserInfo(username));
+            //cleanup
+            request.getSession().removeAttribute("username");
+            request.getSession().removeAttribute("password");
+            if(user.getRole(username).equals("Admin")) {
+                request.getRequestDispatcher("admin.jsp").forward(request, response);
+            } else {
+                request.getRequestDispatcher("reguser.jsp").forward(request, response);
+            }
+            
+        } catch (SQLException ex) {
+            request.getSession().removeAttribute("username");
+            request.getSession().removeAttribute("password");
+            
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
