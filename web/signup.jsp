@@ -47,7 +47,7 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" size="30" value="<%=email%>" />
                 <br><br>
-                <label for="phonenum">Phonenum:</label>
+                <label for="phonenum">Phone Num:</label>
                 <input type="phonenum" name="phonenum" size="30" value="<%=phonenum%>" />
                 <br><br>
                 <label for="address">Address:</label>

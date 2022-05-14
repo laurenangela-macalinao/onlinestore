@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,7 +17,7 @@ import model.Security;
 import model.User;
 import nl.captcha.Captcha;
 
-public class LoginServlet extends HttpServlet {
+public class SignupServlet extends HttpServlet {
 
     Connection conn;
 
@@ -57,72 +58,92 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-  
-        HttpSession session = request.getSession(true);
- 
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String password2 = request.getParameter("password2");
+        String userrole = request.getParameter("userrole");
+        String email = request.getParameter("email");
+        String phonenum = request.getParameter("phonenum");
+        String address = request.getParameter("address");
         String answer = request.getParameter("answer");
         
         response.setContentType("text/html;charset=UTF-8");
         Captcha captcha = (Captcha) request.getSession().getAttribute(Captcha.NAME);
         if(!captcha.isCorrect(answer)) {
+            
             //retain all values
-            //request.getSession().setAttribute("username",username);
-            //request.getSession().setAttribute("password",password);
+            request.getSession().setAttribute("username",username);
+            request.getSession().setAttribute("password",password);
+            request.getSession().setAttribute("password2",password2);
+            request.getSession().setAttribute("userrole",userrole);
+            request.getSession().setAttribute("email",email);
+            request.getSession().setAttribute("phonenum",phonenum);
+            request.getSession().setAttribute("address",address);
  
             String message = "Wrong Captcha.";
-            request.setAttribute("message", message);
-            System.out.println("here1");
-            //request.getRequestDispatcher("login.jsp").forward(request, response);
-            response.sendRedirect("login.jsp");
+            request.setAttribute("message", message);            
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
         }
         User user = new User(conn);
         try {
-            if (!user.isExits(username)){
-                String message = "Invalid username/password";
-                //request.getSession().setAttribute("username",username);
-                //request.getSession().setAttribute("password",password);
-                request.setAttribute("message", message);
-                System.out.println("here2");
-                //request.getRequestDispatcher("login.jsp").forward(request, response);
-                response.sendRedirect("login.jsp");
-            }
-            String savedPassword = user.getPassword(username);
-            System.out.println("savedPassword = " + savedPassword);
-            String plainPassword = Security.decrypt(savedPassword);
-            System.out.println("plainPassword = "+ plainPassword);
-            System.out.println("input Password = "+ password);
-            if (!plainPassword.equals(password)) {
-                String message = "Invalid username/password";
-                //request.getSession().setAttribute("username",username);
-                //request.getSession().setAttribute("password",password);
+            if (user.isExits(username)){
+                String message = "Account Already Exists";
+                //retain all values
+                request.getSession().setAttribute("username",username);
+                request.getSession().setAttribute("password",password);
+                request.getSession().setAttribute("password2",password2);
+                request.getSession().setAttribute("userrole",userrole);
+                request.getSession().setAttribute("email",email);
+                request.getSession().setAttribute("phonenum",phonenum);
+                request.getSession().setAttribute("address",address);
+                
                 request.setAttribute("message", message);            
-                System.out.println("here3");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
-                //response.sendRedirect("login.jsp");
+                request.getRequestDispatcher("signup.jsp").forward(request, response);
             }
-            //request.getSession().setAttribute("user", user.getUserInfo(username));
+            if (!password.equals(password2)) {
+                String message = "Password does not match.";
+                //retain all values
+                request.getSession().setAttribute("username",username);
+                request.getSession().setAttribute("password",password);
+                request.getSession().setAttribute("password2",password2);
+                request.getSession().setAttribute("userrole",userrole);
+                request.getSession().setAttribute("email",email);
+                request.getSession().setAttribute("phonenum",phonenum);
+                request.getSession().setAttribute("address",address);
+                
+                request.setAttribute("message", message);            
+                request.getRequestDispatcher("signup.jsp").forward(request, response);
+            }
+            
+            String securedPassword = Security.encrypt(password);
+            
+            user.saveUser(username, securedPassword, userrole, email, phonenum, address);
 
             //cleanup session attributes
-            //request.getSession().removeAttribute("username");
-            //request.getSession().removeAttribute("password");
-            if(user.getRole(username).equals("admin")) {
-                //session.setAttribute("pageid", 1);
-                //request.setAttribute("userId", user.getUserId(username));            
-                //request.setAttribute("pageid", 1);            
-                response.sendRedirect("/OnlineStore/admin.jsp");
-            } else {
-                //session.setAttribute("pageid", 1);
-                //request.setAttribute("userId", user.getUserId(username));            
-                //request.setAttribute("pageid", 1);            
-                response.sendRedirect("/OnlineStore/reguser.jsp");
-            }
+            request.getSession().removeAttribute("username");
+            request.getSession().removeAttribute("password");
+            request.getSession().removeAttribute("password2");
+            request.getSession().removeAttribute("userrole");
+            request.getSession().removeAttribute("email");
+            request.getSession().removeAttribute("phonenum");
+            request.getSession().removeAttribute("address");
+            
+            String message = "Signup Successful.";
+            request.setAttribute("message", message);            
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+
         } catch (SQLException ex) {
-            //request.getSession().removeAttribute("username");
-            //request.getSession().removeAttribute("password");
+            request.getSession().removeAttribute("username");
+            request.getSession().removeAttribute("password");
+            request.getSession().removeAttribute("password2");
+            request.getSession().removeAttribute("userrole");
+            request.getSession().removeAttribute("email");
+            request.getSession().removeAttribute("phonenum");
+            request.getSession().removeAttribute("address");
+
             Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-            response.sendRedirect("error.jsp");
+            response.sendRedirect("signup.jsp");
         }
     }
 
