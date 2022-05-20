@@ -45,34 +45,61 @@
         </nav>
 
         <!-- Reports Page -->
+        <section class="py-5">
+            <header id="welcome-message" class="bg-info py-5">
+                <div class="container px-4 px-lg-5 my-5">
+                    <div class="text-center text-white">
+                        <h1 class="display-4 fw-bolder">Administrator</h1>
+                        <p class="lead fw-normal text-white-50 mb-0">Reports</p>
+                    </div>
+                </div>
+            </header>
 
-        <header id="welcome-message" class="bg-info py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Administrator</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Reports</p>
+            <div id="div-reports">
+                <div class="row">
+                    <!-- List -->
+                    <div class="col-sm" id="div-reportcol">
+                        <label for="list">LIST</label><br>
+                        <select name="list" id="list">
+                            <option value="admin">Admin</option>
+                            <option value="registered user">Registered User</option>
+                        </select><br>
+                        <button id="btn-list" type="submit">View Report</button>
+                    </div>
+                    <!-- Sales Invoice -->
+                    <div class="col-sm" id="div-reportcol">
+                        <label for="list">SALES INVOICE</label><br>
+                        <select name="list" id="list">
+                            <option value="cash on delivery">Cash on Delivery</option>
+                            <option value="gcash">GCash</option>
+                        </select><br>
+                        <button id="btn-list" type="submit">View Report</button>
+                    </div>
+                    <!-- Report Sales -->
+                    <div class="col-sm" id="div-reportcol">
+                        <label for="list">REPORT SALES</label><br>
+                        <select name="list" id="list">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="monthly">Yearly</option>
+                        </select><br>
+                        <button id="btn-list" type="submit">View Report</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- User Details -->
+                    <div class="col-sm" id="div-reportcol">
+                        <label for="list">USER DETAILS</label><br>
+                        <button id="btn-list" type="submit">View Report</button>
+                    </div>
+                    <!-- Inventory of Books -->
+                    <div class="col-sm" id="div-reportcol">
+                        <label for="list">INVENTORY OF BOOKS</label><br>
+                        <button id="btn-list" type="submit">View Report</button>
+                    </div>
                 </div>
             </div>
-        </header>
-
-        <div id="div-reports">
-            <div class="row">
-                <div class="col-sm" id="div-reportcol">
-                    <label for="list">List</label><br>
-                    <select name="list" id="list">
-                        <option value="admin">Admin</option>
-                        <option value="registered user">Registered User</option>
-                    </select><br>
-                    <button id="btn-list" type="submit">Submit</button>
-                </div>
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm">
-
-                </div>
-            </div>
-        </div>
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
