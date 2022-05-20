@@ -52,81 +52,50 @@
                 </div>
             </div>
         </header>
-        <div id="div-prod">
-            <section class="py-5">
-                <div class="container">               
-                    <div class="card"> 
-                        <div class="row g-0"> 
-                            <!-- Product Photo -->
-                            <div class="col-md-6"> 
-                                <div class="align-items-center"> 
-                                    <div class="mt-5 px-4"> 
-                                        <img src="assets/book99-450x300.jpg" class="img-thumbnail"> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                            <div class="col-md-6"> 
-                                <div class="h-100 d-flex justify-content-center align-items-center"> 
-                                    <div class="py-4 px-3"> 
-                                        <div class="row mt-2"> 
-                                            <!-- Title -->
-                                            <div class="col-md-12">
-                                                <div class="input-field"> 
-                                                    <label for="input3">Title</label> 
-                                                    <h1 id="h1-pdetail">Title</h1>
-                                                </div> 
-                                            </div> 
-                                        </div> 
-                                        <div class="row g-2 mt-1"> 
-                                            <!-- ISBN -->
-                                            <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input3">ISBN</label>
-                                                    <h1 id="h1-pdetail">ISBN</h1>             
-                                                </div> 
-                                            </div> 
-                                            <!-- Author -->
-                                            <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input1">Author</label>
-                                                    <h1 id="h1-pdetail">Author</h1>
-                                                </div> 
-                                            </div>
-                                        </div> 
-                                        <div class="row g-2 mt-1"> 
-                                            <!-- Publisher -->
-                                            <div class="col-md-6"> 
-                                                <label for="input2">Publisher</label>
-                                                <h1 id="h1-pdetail">Publisher</h1>       
-                                            </div> 
-                                            <!-- Year/Edition -->
-                                            <div class="col-md-6"> 
-                                                <label for="input1">Year/Edition</label>
-                                                <h1 id="h1-pdetail">Year/Edition</h1>             
-                                            </div> 
-                                        </div>
-                                        <div class="row g-2 mt-1"> 
-                                            <!-- Price -->
-                                            <div class="col-md-6"> 
-                                                <label for="input2">Price</label>
-                                                <h1 id="h1-pdetail">Price</h1>                 
-                                            </div>                   
-                                            <!-- Stock Count -->
-                                            <div class="col-md-6"> 
-                                                <label for="input1">Stock Count</label>
-                                                <h1 id="h1-pdetail">Stock Count</h1>              
-                                            </div> 
-                                        </div> 
-                                        <div class="row g-2 mt-1">
-                                            <button id="btn-save" type="submit">Buy Now</button>
-                                        </div>
-                                    </div> 
-                                </div> 
-                            </div>  
-                        </div>                  
-                    </div> 
-            </section>
-        </div>
+        <section class="py-5">
+            <div class="container">               
+                <div class="row" id="div-contact">
+                    <div class="col-sm" id="div-bga">
+                        <img src="assets/book99-450x300.jpg" class="img-thumbnail">
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Title</h3>
+                            <h1 id="h1-prod">Title</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">ISBN</h3>
+                            <h1 id="h1-prod">ISBN</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Author</h3>
+                            <h1 id="h1-prod">Author</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Publisher</h3>
+                            <h1 id="h1-prod">Publisher</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Year/Edition</h3>
+                            <h1 id="h1-prod">Year/Edition</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Price</h3>
+                            <h1 id="h1-prod">Price</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Stock Count</h3>
+                            <h1 id="h1-prod">Stock Count</h1>
+                        </div>
+                        <div class="row-sm">
+                            <button id="btn-buy" type="submit">Buy Now</button>
+                        </div>
+                    </div>
+                </div>               
+            </div> 
+        </section>
 
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
