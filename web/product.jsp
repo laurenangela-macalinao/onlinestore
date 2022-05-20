@@ -44,12 +44,11 @@
         </nav>
 
         <!-- Registered User: Product Details Page -->
-        
+
         <header id="welcome-message" class="bg-info py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Administrator</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Update Product</p>
+                    <h1 class="display-4 fw-bolder">Product Details</h1>
                 </div>
             </div>
         </header>
@@ -74,7 +73,7 @@
                                             <div class="col-md-12">
                                                 <div class="input-field"> 
                                                     <label for="input3">Title</label> 
-                                                    <input class="form-control" id="title" placeholder=" Enter Title" required> 
+                                                    <h1 id="h1-pdetail">Title</h1>
                                                 </div> 
                                             </div> 
                                         </div> 
@@ -83,51 +82,43 @@
                                             <div class="col-md-6"> 
                                                 <div class="input-field"> 
                                                     <label for="input3">ISBN</label>
-                                                    <input class="form-control" id="isbn" placeholder="Enter ISBN" required>                 
+                                                    <h1 id="h1-pdetail">ISBN</h1>             
                                                 </div> 
                                             </div> 
                                             <!-- Author -->
                                             <div class="col-md-6"> 
                                                 <div class="input-field"> 
                                                     <label for="input1">Author</label>
-                                                    <input class="form-control" id="author" placeholder="Enter Author" required>
+                                                    <h1 id="h1-pdetail">Author</h1>
                                                 </div> 
                                             </div>
                                         </div> 
                                         <div class="row g-2 mt-1"> 
                                             <!-- Publisher -->
                                             <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input2">Publisher</label>
-                                                    <input class="form-control" id="publisher" placeholder="Enter Publisher" required>       
-                                                </div> 
+                                                <label for="input2">Publisher</label>
+                                                <h1 id="h1-pdetail">Publisher</h1>       
                                             </div> 
                                             <!-- Year/Edition -->
                                             <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input1">Year/Edition</label>
-                                                    <input class="form-control" id="edition" placeholder="Enter Year/Edition" required>             
-                                                </div> 
+                                                <label for="input1">Year/Edition</label>
+                                                <h1 id="h1-pdetail">Year/Edition</h1>             
                                             </div> 
                                         </div>
                                         <div class="row g-2 mt-1"> 
                                             <!-- Price -->
                                             <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input2">Price</label>
-                                                    <input class="form-control" id="price" placeholder="Enter Price" required>                  
-                                                </div> 
-                                            </div> 
+                                                <label for="input2">Price</label>
+                                                <h1 id="h1-pdetail">Price</h1>                 
+                                            </div>                   
                                             <!-- Stock Count -->
                                             <div class="col-md-6"> 
-                                                <div class="input-field"> 
-                                                    <label for="input1">Stock Count</label>
-                                                    <input class="form-control" id="stockcount" placeholder="Enter Stock Count" required>               
-                                                </div> 
+                                                <label for="input1">Stock Count</label>
+                                                <h1 id="h1-pdetail">Stock Count</h1>              
                                             </div> 
                                         </div> 
                                         <div class="row g-2 mt-1">
-                                            <button id="btn-save" type="submit">Save</button>
+                                            <button id="btn-save" type="submit">Buy Now</button>
                                         </div>
                                     </div> 
                                 </div> 

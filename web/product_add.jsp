@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Book World - Add Product</title>
+        <title>Book World - Product</title>
         <meta charset="utf-8"/>
         <meta name="author" content=""/>
         <meta name="description" content=""/>
@@ -15,13 +15,13 @@
         <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/lexend-deca"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
     </head>
-    
+
     <body> 
-        
+
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Book World</a>
+                <a class="navbar-brand" href="#!">Book World</a>
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -42,8 +42,8 @@
                 </div>
             </div>
         </nav>
-        
-        <!-- Admin: Add Product Page -->
+
+        <!-- Registered User: Product Details Page -->
         
         <header id="welcome-message" class="bg-info py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -53,95 +53,90 @@
                 </div>
             </div>
         </header>
-        <section class="py-5">
-            <div class="container">               
-              <div class="card"> 
-                <div class="row g-0"> 
-                    <div class="col-md-6"> 
-                        <div class="h-100 d-flex justify-content-center align-items-center"> 
-                            <div class="py-4 px-3"> 
-                                <div class="row g-2 mt-1"> 
-                                    <div class="col-md-6"> 
-                                        <div class="input-field"> 
-                                            <input class="form-control" id="title" placeholder="Enter Title" required> 
-                                            <label for="input1">Title</label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-md-6"> <div class="input-field"> 
-                                            <input class="form-control" id="isbn" placeholder="Enter ISBN" required> 
-                                            <label for="input2">ISBN</label> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                <div class="row g-2 mt-1"> 
-                                    <div class="col-md-6"> 
-                                        <div class="input-field"> 
-                                            <input class="form-control" id="author" placeholder="Enter Author" required> 
-                                            <label for="input1">Author</label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-md-6"> <div class="input-field"> 
-                                            <input class="form-control" id="publisher" placeholder="Enter Publisher" required> 
-                                            <label for="input2">Publisher</label> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                
-                                <div class="row g-2 mt-1"> 
-                                    <div class="col-md-6"> 
-                                        <div class="input-field"> 
-                                            <input class="form-control" id="edition" placeholder="Enter Year/Edition" required> 
-                                            <label for="input1">Year/Edition</label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-md-6"> <div class="input-field"> 
-                                            <input class="form-control" id="price" placeholder="Enter Price" required> 
-                                            <label for="input2">Price</label> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                
-                                <div class="row mt-2"> 
-                                    <div class="col-md-12"> <div class="input-field"> 
-                                            <input class="form-control" id="description" placeholder="Enter Description" required> 
-                                            <label for="input3">Description</label> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                
-                                <div class="row g-2 mt-1"> 
-                                    <div class="col-md-6"> 
-                                        <div class="input-field"> 
-                                            <input class="form-control" id="stockcount" placeholder="Enter Stock Count" required> 
-                                            <label for="input1">Stock Count</label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-md-6"> <div class="input-field"> 
-                                            <input class="form-control" id="imageid" placeholder="Enter Image Location" required> 
-                                            <label for="input2">Image Location</label> 
-                                        </div> 
+        <div id="div-prod">
+            <section class="py-5">
+                <div class="container">               
+                    <div class="card"> 
+                        <div class="row g-0"> 
+                            <!-- Product Photo -->
+                            <div class="col-md-6"> 
+                                <div class="align-items-center"> 
+                                    <div class="mt-5 px-4"> 
+                                        <img src="assets/book99-450x300.jpg" class="img-thumbnail"> 
                                     </div> 
                                 </div> 
                             </div> 
-                        </div> 
+                            <div class="col-md-6"> 
+                                <div class="h-100 d-flex justify-content-center align-items-center"> 
+                                    <div class="py-4 px-3"> 
+                                        <div class="row mt-2"> 
+                                            <!-- Title -->
+                                            <div class="col-md-12">
+                                                <div class="input-field"> 
+                                                    <label for="input3">Title</label> 
+                                                    <input class="form-control" id="title" placeholder=" Enter Title" required> 
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                        <div class="row g-2 mt-1"> 
+                                            <!-- ISBN -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input3">ISBN</label>
+                                                    <input class="form-control" id="isbn" placeholder="Enter ISBN" required>                 
+                                                </div> 
+                                            </div> 
+                                            <!-- Author -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input1">Author</label>
+                                                    <input class="form-control" id="author" placeholder="Enter Author" required>
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                        <div class="row g-2 mt-1"> 
+                                            <!-- Publisher -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input2">Publisher</label>
+                                                    <input class="form-control" id="publisher" placeholder="Enter Publisher" required>       
+                                                </div> 
+                                            </div> 
+                                            <!-- Year/Edition -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input1">Year/Edition</label>
+                                                    <input class="form-control" id="edition" placeholder="Enter Year/Edition" required>             
+                                                </div> 
+                                            </div> 
+                                        </div>
+                                        <div class="row g-2 mt-1"> 
+                                            <!-- Price -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input2">Price</label>
+                                                    <input class="form-control" id="price" placeholder="Enter Price" required>                  
+                                                </div> 
+                                            </div> 
+                                            <!-- Stock Count -->
+                                            <div class="col-md-6"> 
+                                                <div class="input-field"> 
+                                                    <label for="input1">Stock Count</label>
+                                                    <input class="form-control" id="stockcount" placeholder="Enter Stock Count" required>               
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                        <div class="row g-2 mt-1">
+                                            <button id="btn-save" type="submit">Save</button>
+                                        </div>
+                                    </div> 
+                                </div> 
+                            </div>  
+                        </div>                  
                     </div> 
-                    <div class="col-md-6"> 
-                        <div class="align-items-center"> 
-                            <div class="mt-5 px-4"> 
-                                <img src="assets/book99-450x300.jpg" class="img-thumbnail"> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    
-                    <div class="container "> 
-                        <button class="w-100 btn btn-danger btn-lg justify-content-center" type="submit">Save</button>
-                    </div> 
-                </div> 
-                  
-              </div> 
-            
-        </section>
-        
+            </section>
+        </div>
+
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
             <div class="container">
