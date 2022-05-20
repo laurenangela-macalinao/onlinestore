@@ -50,7 +50,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Welcome to Book World!</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Enter description here.</p>
+                    <p class="lead fw-normal text-white-50 mb-0">You are registered as a guest.</p>
                 </div>
             </div>
         </header>
@@ -71,7 +71,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
                                     <a class="btn btn-outline-dark mt-auto" href="#">
-                                        Add to Cart
+                                        View Details
                                     </a>
                                 </div>
                             </div>
