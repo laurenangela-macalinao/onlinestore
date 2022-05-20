@@ -287,9 +287,56 @@ table, tr, td
 
 /* product_update.jsp */
 
-/* report_sales.jsp */
+/* reports.jsp */
 
-/* report_stocks.jsp */
+#div-reports
+{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+#div-reportcol
+{
+    font-size: 20px;
+    margin: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+#list
+{
+    width: 90%;
+    padding: 5px 5px 5px 5px;
+}
+
+#btn-list
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 90%;
+    padding: 10px 0px 10px 0px;  
+}
+
+label[for=list]
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #3cb3c0;
+    width: 90%;
+    padding: 10px 0px 10px 0px; 
+}
 
 /* payment.jsp */
 
