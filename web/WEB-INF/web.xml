@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>guest.jsp</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>jdbcClassName</param-name>
@@ -54,6 +54,26 @@
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>controller.LoginServlet</servlet-class>
+        
+        <init-param>
+  		<param-name>jdbcClassName</param-name>
+  		<param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>dbUserName</param-name>
+  		<param-value>app</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>dbPassword</param-name>
+  		<param-value>app</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>jdbcDriverURL</param-name>
+  		<param-value>jdbc:derby://localhost:1527/BookWorldDB</param-value>
+  	</init-param>
     </servlet>
     <servlet>
         <servlet-name>SignupServlet</servlet-name>
@@ -86,10 +106,18 @@
     <servlet>
         <servlet-name>SimpleCaptcha</servlet-name>
         <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+        <init-param>
+            <param-name>captcha-width</param-name>
+            <param-value>300</param-value>
+        </init-param>
+        <init-param>
+            <param-name>captcha-height</param-name>
+            <param-value>100</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>SimpleCaptcha</servlet-name>
-        <url-pattern>/simpleImg</url-pattern>
+        <url-pattern>/simpleCaptcha.png</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SignupServlet</servlet-name>

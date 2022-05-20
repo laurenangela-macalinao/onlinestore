@@ -1,15 +1,21 @@
+<%-- 
+    Document   : register_sucess
+    Created on : 04 30, 22, 2:11:21 AM
+    Author     : Benedict Balancio
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error Page</title>
+        <title>Register Success Page</title>
         
         <style>
             body 
             {
                 font-family: 'Open Sans', sans-serif;
-                background-image: url("pictures/login_background.jpg");
+                background-image: url("pictures/signup_background.png");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -24,12 +30,12 @@
             h1
             {
                 font-family: 'Open Sans', sans-serif;
+                color: white;
             }
 
             .sub-head
             {
                 margin-top: -20px;
-                font-size: 15px;
             }
 
             .image
@@ -53,35 +59,12 @@
                 cursor: pointer;
             }
         </style>
-       
     </head>
     <body>
-        <img class="image" src="pictures/error_mark.png" alt="checklogo">
-        <h1>Authentication Error <h1>
-        <p class="sub-head">
-            <u>
-                <b>
-                    <%
-                        String error = (String) request.getAttribute("error");
-                        
-                        if (error == null)
-                        {
-                            out.println("");
-                        }
-                        else if(error.equals("Username"))
-                        {
-                            out.println("Username Not Found. Please Try Again.");
-                        }
-                        else if(error.equals("Password"))
-                        {
-                            out.println("Incorrect Password. Please Try Again.");
-                        }
-                    %>
-                </b>
-            </u>
-        </p>
+        <img class="image" src="pictures/correct_mark.png" alt="checklogo">
+        <h1>Sign Up is Sucessful!</h1>
         <a href ="login.jsp">
-            <button href="login.jsp" name="home_button" type="submit">Okay</button>
+            <button href="login.jsp" name="home_button" type="submit">Go to Login Page</button>
         </a>
     </body>
 </html>
