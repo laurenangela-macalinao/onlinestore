@@ -54,7 +54,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book01-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/AutomataTheory.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -75,7 +75,7 @@
 
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book02-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/AppliedCalculus.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book03-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/HeadFirst.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -115,7 +115,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book04-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/Photoshop.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -135,7 +135,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book05-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/FacesOfMusic.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book06-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/Tokyo.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -175,7 +175,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book07-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/ObjectOriented.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -195,7 +195,7 @@
                     </div>
                     <div class="col mb-5">
                         <div id="card" class="card h-100">
-                            <img class="card-img-top" src="assets/book08-450x300.jpg" alt="..." />
+                            <img class="card-img-top" src="DiscreteMath.jpg" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
@@ -216,14 +216,6 @@
                     </div>
                 </div>
             </div>
-            
-            <ul class="pagination justify-content-center" style="margin:10px 0">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
         </section>
         
         <!-- Footer -->
