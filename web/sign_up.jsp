@@ -134,7 +134,7 @@
     </head>
     <body>
         <p class="home"> Want to go back to Home Page? <a href="guest.jsp" style="color:#C91D1D;">Click here</a></p>
-        <form method="POST" action="LoginServlet">
+        <form method="POST" action="LoginServlet.do" autocomplete="off">
             <h1>Sign Up </h1>
             <p class="sub-head">Please fill in this form to create an account!
             <hr>
@@ -150,15 +150,15 @@
             </div>
             <label for="role">Choose your role:</label>
             <select name="role" id="role">
-                <option value="guest">Guest</option>
-                <option value="admin">Admin</option>
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
             </select>
             <br>
             <br>
             <img class="image" src="<%=request.getContextPath()%>/simpleCaptcha.png">
             <br>
             <label for="code">Characters: </label>
-            <input type="text" name="code2" autocomplete="false" required>
+            <input type="text" name="code2" required>
             <br>
             <p class="error"> 
                 <b>

@@ -152,7 +152,7 @@
         <p class="home"> Want to go back to Home Page? <a href="guest.jsp" style="color:#C91D1D;">Click here</a></p>
         <h1>Login</h1>
         <p>*Please fill the details below*</p>
-        <form method="POST" action="LoginServlet" autocomplete="off">
+        <form method="POST" action="LoginServlet.do" autocomplete="off">
             <div class="credentials">
                 <label for="email">Username</label>
                 <input type="text" name="username" placeholder="marvelouscat02" >
