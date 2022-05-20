@@ -38,40 +38,99 @@
         </nav>
 
         <!-- Contact Page -->
-        
+
         <header id="welcome-message" class="bg-info py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Administrator</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Reports</p>
+                    <h1 class="display-4 fw-bolder">Contact</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">The Developers</p>
                 </div>
             </div>
         </header>
         <section class="py-5">
-            <div id="div-reports">
-                <div class="col">
-                    <!-- Benedict Balancio -->
-                    <div class="row-sm" id="div-reportcol">
-                        <div class="col">
-                            
-                        </div>
-                        <div class="col">
+            <div class="container">
+                <!-- Benedict Balancio -->
+                <div class="row" id="div-contact">
+                    <div class="col-sm" id="div-bga">
+                        <img id="img-contact1" src="assets/Benedict.jpg"></img>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Name</h3>
                             <h1 id="h1-name">Benedict S. Balancio</h1>
                         </div>
-                        <div class="col">
-                            Email
-                        </div>
-                        <div class="col">
-                            Facebook
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Email</h3>
+                            <h1 id="h1-contact">benedict.balancio.cics@ust.edu.ph</h1>
                         </div>
                     </div>
-                    <!-- Gianina Paula Gonzalez -->
-                    <div class="row-sm" id="div-reportcol">
-                        
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga2">
+                            <h1 id="h1-cname">Facebook</h1>
+                            <img id="img-contact2" src="assets/Benedict_QR.PNG"></img>
+                        </div>
                     </div>
-                    <!-- Lauren Angela Macalinao -->
-                    <div class="row-sm" id="div-reportcol">
-                        
+                    <div class="col-sm">
+                        <div class="col-sm" id="div-bga2">
+                            <h1 id="h1-cname">Instagram</h1>
+                            <img id="img-contact2" src="assets/Benedict_QR.PNG"></img>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gianina Paula Gonzalez -->
+                <div class="row" id="div-contact">
+                    <div class="col-sm" id="div-bga">
+                        <img id="img-contact1" src="assets/Benedict.jpg"></img>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Name</h3>
+                            <h1 id="h1-name">Gianina Paula Gonzalez</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Email</h3>
+                            <h1 id="h1-contact">gianinapaula.gonzalez.cics@ust.edu.ph</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga2">
+                            <h1 id="h1-cname">Facebook</h1>
+                            <img id="img-contact2" src="assets/Gianina_QR.PNG"></img>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm" id="div-bga2">
+                            <h1 id="h1-cname">Instagram</h1>
+                            <img id="img-contact2" src="assets/Gianina_QR.PNG"></img>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lauren Angela Macalinao -->
+                <div class="row" id="div-contact">
+                    <div class="col-sm" id="div-bga">
+                        <img id="img-contact1" src="assets/Angela.jpg"></img>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Name</h3>
+                            <h1 id="h1-name">Lauren Angela B. Macalinao</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Email</h3>
+                            <h1 id="h1-contact">laurenangela.macalinao.cics@ust.edu.ph</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row-sm" id="div-bga2">
+                            <h1 id="h1-cname">Facebook</h1>
+                            <img id="img-contact2" src="assets/Benedict_QR.PNG"></img>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm" id="div-bga2">
+                            <h1 id="h1-cname">Instagram</h1>
+                            <img id="img-contact2" src="assets/Benedict_QR.PNG"></img>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +198,7 @@
                 <h2 id="h2-detail">Twitter</h2> 
             </div>         
         </div>
--->
+        -->
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
             <div class="container">
