@@ -35,7 +35,7 @@
                             Login
                         </button>
                     </a> 
-                    <a class="d-flex" id="nav-signup" href="signup.jsp">
+                    <a class="d-flex" id="nav-signup" href="sign_up.jsp">
                         <button class="btn btn-outline-success">
                             Signup
                         </button>

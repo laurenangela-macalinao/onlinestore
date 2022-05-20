@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Page</title>
+        <title>Sign Up Page</title>
 
         <style>
             @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -11,7 +11,7 @@
             body 
             {
                 font-family: 'Open Sans', sans-serif;
-                background-image: url("pictures/login_background.jpg");
+                background-image: url("pictures/signup_background.png");
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -21,33 +21,46 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 0;
-                padding: 0;
             }
 
             h1
             {
-                margin-top: 9px;
-                color: white;
-                font-size: 40px;
+                margin-top: 0px;
+                font-size: 35px;
             }
 
-            p
+            p.sub-head
             {
-                color: white;
-                font-size: 14px;
+                margin-top: -10px;
+            }
+
+            p.header
+            {
+                font-size: 10px;
                 text-align: center;
+            }
+
+            p.footer
+            {
+                font-size: 10px;
+                color: #6E6E6E;
+                text-align: center;
+            }
+
+            p.home
+            {
+                text-align: center;
+                color: #3a3c47;
             }
 
             form 
             {
                 background: white;
-                max-width: 350px;
+                max-width: 410px;
                 width: 100%;
                 padding: 40px 44px;
                 border: 1px solid #D6D7E7;
-                border-radius: 11px;
-                transition: all 0.3s ease;
+                border-radius: 7px;
             }
 
             .credentials
@@ -55,12 +68,6 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 20px;
-            }
-
-            .credentials label 
-            {
-                font-size: 14px;
-                color: #8086a9;
             }
 
             .credentials input 
@@ -72,36 +79,21 @@
                 border-radius: 8px;
                 font-size: 16px;
             }
-            
 
             .credentials input::placeholder 
             {
                 color: #B8BDCD;
             }
 
-            button 
-            {
-                width: 100%;
-                padding: 10px;
-                font-size: 18px;
-                background: #1877f2;
-                color: white;
-                border: none;
-                border-radius: 11px;
-                cursor: pointer;
-                font-family: 'Open Sans', sans-serif;
-                margin-top: 15px;
-            }
-
             .button2
             {
-                width: 100%;
-                padding: 10px;
+                width: 20%;
+                padding: 7px;
                 font-size: 18px;
                 background: #06b909;
                 color: white;
                 border: none;
-                border-radius: 11px;
+                border-radius: 4px;
                 cursor: pointer;
                 font-family: 'Open Sans', sans-serif;
                 margin-top: 15px;
@@ -112,20 +104,18 @@
                 background: #B4B4B4;
             }
 
-            @media(max-width: 458px) 
+            select
             {
-                body 
-                {
-                    margin: 0 18px;
-                }
-
-                form 
-                {
-                    background: #f9faff;
-                    border: none;
-                    box-shadow: none;
-                    padding: 20px 0;
-                }
+                width: 20%;
+                padding: 5px;
+                font-size: 16px;
+                background: #E1E1E1;
+                color: #4C4C4C;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-family: 'Open Sans', sans-serif;
+                border: 1.5px solid #555;
             }
             
             .error
@@ -140,34 +130,36 @@
                 max-width: 300px;
                 height: auto;
             }
-            
-            p.home
-            {
-                text-align: center;
-                color: #3a3c47;
-            }
         </style>
     </head>
     <body>
         <p class="home"> Want to go back to Home Page? <a href="guest.jsp" style="color:#C91D1D;">Click here</a></p>
-        <h1>Login</h1>
-        <p>*Please fill the details below*</p>
-        <form method="POST" action="LoginServlet" autocomplete="off">
+        <form method="POST" action="LoginServlet">
+            <h1>Sign Up </h1>
+            <p class="sub-head">Please fill in this form to create an account!
+            <hr>
+            <br>
             <div class="credentials">
-                <label for="email">Username</label>
-                <input type="text" name="username" placeholder="marvelouscat02" >
+                <input type="text" name="username2" placeholder="Username" required>
             </div>
             <div class="credentials">
-                <label for="password">Password</label>
-                <input type="password" name="password" placeholder="***********" >
+                <input type="text" name="password2" placeholder="Password" required>
             </div>
+            <div class="credentials">
+                <input type="text" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <label for="role">Choose your role:</label>
+            <select name="role" id="role">
+                <option value="guest">Guest</option>
+                <option value="admin">Admin</option>
+            </select>
+            <br>
+            <br>
             <img class="image" src="<%=request.getContextPath()%>/simpleCaptcha.png">
             <br>
+            <label for="code">Characters: </label>
+            <input type="text" name="code2" autocomplete="false" required>
             <br>
-            <div class="credentials">
-                <label for="code">Characters: </label>
-                <input type="text" name="code" >
-            </div>
             <p class="error"> 
                 <b>
                     <%
@@ -181,14 +173,19 @@
                         {
                             out.println("Error: Incorrect Captcha. Please Try Again.");
                         }
+                        else if(error.equals("Username"))
+                        {
+                            out.println("Error: Username Already Exist. Please Try Again.");
+                        }
+                        else if(error.equals("Password"))
+                        {
+                            out.println("Error: Passwords Do Not Match. Please Try Again.");
+                        }
                     %>
                 </b>
             </p>
-            <button type="submit" name="action" value="FirstAction">Login</button>
-            <br>
-            <br>
-            <hr>
-            <button type="submit" class="button2" name="action" value="SecondAction">Create New Account</button>
+            <button type="submit" class="button2" name="action" value="ThirdAction">Sign Up</button>
         </form>
+        <p class="home"> Already have an account? <a href="login.jsp" style="color:#1A1B20;">Login here</a></p>
     </body>
 </html>
