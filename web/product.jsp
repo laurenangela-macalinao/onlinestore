@@ -56,7 +56,13 @@
             <div class="container">               
                 <div class="row" id="div-contact">
                     <div class="col-sm" id="div-bga">
-                        <img src="assets/book99-450x300.jpg" class="img-thumbnail">
+                        <img src="
+                             <%
+                                String book = (String) request.getAttribute("book");
+                                
+                                out.println(book);
+                                 
+                             %>" class="img-thumbnail">
                     </div>
                     <div class="col-sm">
                         <div class="row-sm" id="div-bga1">

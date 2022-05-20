@@ -204,6 +204,17 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>       
+        <script src="js/scripts.js"></script> 
+        
+        <%
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Expires", "0");
+
+            if (session.getAttribute("username") == null) 
+            {
+                response.sendRedirect("guest.jsp");
+            }
+        %>
     </body>
 </html>

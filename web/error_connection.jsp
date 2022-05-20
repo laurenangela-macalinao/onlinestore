@@ -12,10 +12,10 @@
         <title>Error Connection Page</title>
         
         <style>
-            body 
+           body 
             {
                 font-family: 'Open Sans', sans-serif;
-                background-image: url("ErrorBG.jpg");
+                background-image: url("pictures/error_connection_background.jpg");
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -34,7 +34,7 @@
                 width: 100%;
                 max-width: 160px;
                 height: auto;
-                margin-top: 50px;
+                margin-top: 100px;
             }
             
             .sub-head
@@ -72,7 +72,7 @@
         <img class="image" src="pictures/db_not_found.png" alt="databaselogo">
         <h1>Connection is Null</h1>
         <p class="sub-head"> Sorry! You are not connected to the database. Please try again.</p>
-        <a href="index.jsp">
+        <a href="guest.jsp">
             <button id="submit" name="logbutton" type="submit">Go Back</button>
         </a>
     </body>

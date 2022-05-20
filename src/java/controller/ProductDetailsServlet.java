@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package controller;
 
 import java.io.IOException;
@@ -5,9 +10,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class LogoutServlet extends HttpServlet {
+/**
+ *
+ * @author Benedict Balancio
+ */
+public class ProductDetailsServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -21,10 +29,17 @@ public class LogoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession();
-        session.removeAttribute("username");
-        session.invalidate();
-        response.sendRedirect("guest.jsp");
+        String book = request.getParameter("book");
+        String automata = "";
+        
+        if(book.equals("Automata"))
+        {
+            automata = "assets/book01-450x300.jpg";
+            request.setAttribute("book", automata);
+            request.getRequestDispatcher("product.jsp").forward(request, response);
+        }
+//           response.sendRedirect("product.jsp");
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

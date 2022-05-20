@@ -88,13 +88,13 @@ public class LoginServlet extends HttpServlet {
                                 {
                                     HttpSession session2 = request.getSession();
                                     session2.setAttribute("username", username);
-                                    response.sendRedirect("success.jsp");
+                                    response.sendRedirect("registered_user.jsp");
                                 }
                                 else 
                                 {
                                     HttpSession session3 = request.getSession();
                                     session3.setAttribute("username", username);
-                                    response.sendRedirect("success_admin.jsp");
+                                    response.sendRedirect("admin.jsp");
                                 }
                             } 
                             else 

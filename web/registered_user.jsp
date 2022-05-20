@@ -30,14 +30,9 @@
                 <div class="collapse navbar-collapse" 
                      id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4"></ul>
-                    <a class="d-flex" id="nav-login" href="login.jsp">
+                    <a class="d-flex" id="nav-login" href="LogoutServlet.do">
                         <button class="btn btn-outline-success">
-                            Login
-                        </button>
-                    </a> 
-                    <a class="d-flex" id="nav-signup" href="sign_up.jsp">
-                        <button class="btn btn-outline-success">
-                            Signup
+                            Log Out
                         </button>
                     </a> 
                 </div>
@@ -50,7 +45,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Welcome to Book World!</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">You are visiting as a guest.</p>
+                    <p class="lead fw-normal text-white-50 mb-0">You are a registered user.</p>
                 </div>
             </div>
         </header>
@@ -69,10 +64,10 @@
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"> 
-                                    <form method="POST" action="ProductDetailsServlet.do">
-                                        <button class="btn btn-outline-dark mt-auto" type="submit" name="book" value="Automata">Login</button>
-                                    </form>
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="#">
+                                        View Details
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -245,6 +240,15 @@
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-        
+        <%
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Expires", "0");
+
+            if (session.getAttribute("username") == null) 
+            {
+                response.sendRedirect("guest.jsp");
+            }
+        %>
     </body>
 </html>
