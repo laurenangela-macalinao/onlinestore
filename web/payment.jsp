@@ -149,10 +149,8 @@
                         </ul>
                     </div>               
                 </div>
-                <div>
-                    <hr class="my-4">
-                    <button class="w-100 btn btn-danger btn-lg" type="submit">Proceed Payment</button>
-                </div>
+                <hr class="my-4">
+                <button id="btn-save" type="submit">Proceed Payment</button>
             </div>
         </section>
 
