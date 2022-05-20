@@ -64,16 +64,16 @@
                             <h1 id="h1-prod">Title</h1>
                         </div>
                         <div class="row-sm" id="div-bga1">
-                            <h3 id="h1-cname">ISBN</h3>
-                            <h1 id="h1-prod">ISBN</h1>
-                        </div>
-                        <div class="row-sm" id="div-bga1">
                             <h3 id="h1-cname">Author</h3>
                             <h1 id="h1-prod">Author</h1>
                         </div>
                         <div class="row-sm" id="div-bga1">
                             <h3 id="h1-cname">Publisher</h3>
                             <h1 id="h1-prod">Publisher</h1>
+                        </div>
+                        <div class="row-sm" id="div-bga1">
+                            <h3 id="h1-cname">Order Quantity</h3>
+                            <input id="input-prodamnt"></input>
                         </div>
                     </div>
                     <div class="col-sm">

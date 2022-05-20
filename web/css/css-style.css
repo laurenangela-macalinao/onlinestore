@@ -385,6 +385,14 @@ label[for=list]
     padding: 10px 0px 10px 0px; 
 }
 
+#input-prodamnt
+{
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    width: 145px;
+}
+
 /* payment.jsp */
 
 /* orderhist.jsp */
