@@ -38,6 +38,45 @@
         </nav>
 
         <!-- Contact Page -->
+        
+        <header id="welcome-message" class="bg-info py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Administrator</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Reports</p>
+                </div>
+            </div>
+        </header>
+        <section class="py-5">
+            <div id="div-reports">
+                <div class="col">
+                    <!-- Benedict Balancio -->
+                    <div class="row-sm" id="div-reportcol">
+                        <div class="col">
+                            
+                        </div>
+                        <div class="col">
+                            <h1 id="h1-name">Benedict S. Balancio</h1>
+                        </div>
+                        <div class="col">
+                            Email
+                        </div>
+                        <div class="col">
+                            Facebook
+                        </div>
+                    </div>
+                    <!-- Gianina Paula Gonzalez -->
+                    <div class="row-sm" id="div-reportcol">
+                        
+                    </div>
+                    <!-- Lauren Angela Macalinao -->
+                    <div class="row-sm" id="div-reportcol">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--
         <div id="div-contact">
             <h1 id="h1-contact">Contact</h1>
             <div id="div-profile">
@@ -100,7 +139,7 @@
                 <h2 id="h2-detail">Twitter</h2> 
             </div>         
         </div>
-
+-->
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
             <div class="container">
