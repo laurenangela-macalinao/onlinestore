@@ -73,6 +73,7 @@
                             <select name="list" id="list">
                                 <option value="cash on delivery">Cash on Delivery</option>
                                 <option value="gcash">GCash</option>
+                                <option value="gcash">PayMaya</option>
                             </select><br>
                             <button id="btn-list" type="submit">View Report</button>
                         </div>

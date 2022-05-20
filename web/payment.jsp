@@ -15,12 +15,12 @@
         <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/lexend-deca"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
     </head>
-    
+
     <body> 
         <!--Header-->
         <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Book World</a>
+                <a class="navbar-brand" href="#!">Book World</a>
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -42,7 +42,8 @@
             </div>
         </nav>
 
-        <!-- Section-->
+        <!-- Payment Page -->
+
         <section class="py-5">
             <div class="container mt-3">
                 <div class="py-5 text-center">
@@ -51,7 +52,7 @@
                 <div class="row g-5">
                     <div class="col-md-7 col-lg-8">
                         <h4 class="mb-3">Billing address</h4>
-                        
+
                         <form class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-12">
@@ -86,7 +87,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <hr class="my-4">
 
                             <h4 class="mb-3">Payment</h4>
@@ -99,6 +100,10 @@
                                     <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
                                     <label class="form-check-label" for="debit">GCash</label>
                                 </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                    <label class="form-check-label" for="debit">PayMaya</label>
+                                </div>
                             </div>
                             <div class="row gy-3">
                                 <div class="col-md-6">
@@ -107,9 +112,9 @@
                             </div>
                         </form>
                     </div>
-                    
-                    
-                    
+
+
+
                     <div class="col-md-5 col-lg-4 order-md-last">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                             <span class="text-primary">Your Order</span>
@@ -142,8 +147,7 @@
                                 <strong>P3,966.00</strong>
                             </li>
                         </ul>
-                    </div>
-                    
+                    </div>               
                 </div>
                 <div>
                     <hr class="my-4">
@@ -151,7 +155,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Footer -->
         <footer id="footer" class="py-5 bg-dark">
             <div class="container">
